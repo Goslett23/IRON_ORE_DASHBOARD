@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "as_of": "12 August 2026",
+    "generated_at": "2026-08-12T14:16:15+00:00",
+    "next_refresh": "19 August 2026",
+    "sources_checked": 0,
+    "review_status": "offline validation",
+    "schema_version": 1
+  },
+  "kpis": [
+    {
+      "label": "Disruption risk",
+      "value": "TODO",
+      "detail": "No disruption entries logged yet — pending analyst review of Tier 1/2 sources",
+      "tone": "blue"
+    },
+    {
+      "label": "Mine-level supply tightness",
+      "value": "TODO",
+      "detail": "Pending analyst assessment (fines/lump availability, port stockpiles)",
+      "tone": "blue"
+    },
+    {
+      "label": "2026 mine supply growth",
+      "value": "TODO",
+      "detail": "Pending sourced figure — no confirmed REQ/IBRAM/USGS forecast loaded yet",
+      "tone": "blue"
+    },
+    {
+      "label": "Seaborne market balance",
+      "value": "TODO",
+      "detail": "Pending sourced figure",
+      "tone": "blue"
+    }
+  ],
+  "disruptions": [],
+  "reference_mines": {
+    "note": "Tracked major iron ore operations shown for geographic context. No disruption assessment has been made for any entry below; coordinates are marked TODO where not yet sourced (see TODO.md). China's domestic aggregate is tracked as country-level context via USGS/NBS statistics only and is deliberately not listed here or plotted, since it has no single representative mine location.",
+    "items": [
+      {
+        "name": "Carajás / S11D + Serra Norte (Northern System)",
+        "country": "Brazil",
+        "operator": "Vale S.A.",
+        "reporting_level": "System-level (Northern System reported as one block; S11D sometimes broken out)",
+        "production_2025_est_mt": 190,
+        "production_basis": "TODO — attributable share not yet confirmed; figure is the hub/system-level estimate from the source tracker, not adjusted to Vale's equity interest",
+        "report_name": "Production and Sales Report (quarterly)",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://vale.com/investors",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Confirmed via Q1/Q2 2026 reports. Mine-level = system-level, not single-pit."
+      },
+      {
+        "name": "Pilbara operations (Hamersley, Hope Downs, Robe River, Yandicoogina)",
+        "country": "Australia",
+        "operator": "Rio Tinto",
+        "reporting_level": "Sub-hub level (Hamersley mines, Hope Downs, Robe River, IOC, Simandou reported separately in tables)",
+        "production_2025_est_mt": 330,
+        "production_basis": "TODO — attributable share not yet confirmed per sub-hub (e.g. Hope Downs is a 50% joint venture); figure is the consolidated estimate from the source tracker",
+        "report_name": "Quarterly Operations Review + 6-K filing",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://www.riotinto.com/en/news",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Confirmed — best mine-level granularity of the majors (see Q1 2026 Annex table)."
+      },
+      {
+        "name": "Western Australia Iron Ore (WAIO)",
+        "country": "Australia",
+        "operator": "BHP",
+        "reporting_level": "Consolidated WAIO total; individual mines (Newman, Yandi, Mining Area C, Jimblebar) not always broken out weekly",
+        "production_2025_est_mt": 290,
+        "production_basis": "TODO — attributable share not yet confirmed; figure is the consolidated WAIO total from the source tracker",
+        "report_name": "Operational Review (quarterly) + Annual Report",
+        "cadence": "Quarterly (half-year detail is richer)",
+        "primary_source_url": "https://www.bhp.com/news/media-centre",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Confirmed. Also publishes a downloadable Excel data book alongside each review — good automation target once the fetcher supports it (currently HTML/JSON only, see TODO.md)."
+      },
+      {
+        "name": "Pilbara operations (Chichester + Solomon hubs)",
+        "country": "Australia",
+        "operator": "Fortescue",
+        "reporting_level": "Hub-level (Chichester, Solomon); Iron Bridge magnetite reported separately",
+        "production_2025_est_mt": 190,
+        "production_basis": "TODO — attributable share not yet confirmed; figure is the hub-level estimate from the source tracker",
+        "report_name": "Quarterly Production Report",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://investors.fortescue.com/en/results-and-operational-performance",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Confirmed. Iron Bridge (magnetite) is a useful separate line for grade-mix tracking."
+      },
+      {
+        "name": "Minas-Rio",
+        "country": "Brazil",
+        "operator": "Anglo American",
+        "reporting_level": "Single-asset — one of the few true single-mine disclosures available",
+        "production_2025_est_mt": 24,
+        "production_basis": "TODO — attributable share not yet confirmed",
+        "report_name": "Production Report (quarterly)",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://www.angloamerican.com/media/press-releases",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Small volume but genuinely mine-level, unlike the hub-level majors — useful cross-check asset. Needs confirmation of exact PDF naming/URL pattern before deeper scraper build."
+      },
+      {
+        "name": "Liberia operations (Yekepa / Tokadeh)",
+        "country": "Liberia",
+        "operator": "ArcelorMittal Liberia",
+        "reporting_level": "Country-level within ArcelorMittal's global mining segment disclosure",
+        "production_2025_est_mt": 6,
+        "production_basis": "TODO — attributable share not yet confirmed",
+        "report_name": "Segment note in quarterly/annual report",
+        "cadence": "Quarterly (limited detail)",
+        "primary_source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Registry gap fixed — now covered by automation/source_registry.json's arcelormittal-liberia-sec-6k entry. Verified via the Q1 2026 6-K exhibit: the Mining segment table breaks out Liberia iron ore production/shipments quarterly, separate from ArcelorMittal Mines Canada (AMMC). This is better disclosure than originally assumed — the candidate sheet's 'may only appear in annual report, not quarterly' caveat was incorrect."
+      },
+      {
+        "name": "Bloom Lake",
+        "country": "Canada",
+        "operator": "Champion Iron",
+        "reporting_level": "Single-asset (small producer, but full transparency as sole material asset)",
+        "production_2025_est_mt": 15,
+        "production_basis": "TODO — attributable share not yet confirmed",
+        "report_name": "Quarterly Activities Report (ASX/TSX filing)",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://www.asx.com.au/markets/company/CIA",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Confirmed — good candidate for exact mine-level tracking despite smaller scale. No REQ/IBRAM-equivalent third-party outlook forecaster confirmed for Canada — outlook scenario notes touching this asset should cite \"internal\" until a real source is found."
+      },
+      {
+        "name": "Simandou (SimFer / Winning Consortium blocks)",
+        "country": "Guinea",
+        "operator": "Rio Tinto / Chinalco JV + WCS",
+        "reporting_level": "New asset, ramping up in 2026; disclosure currently folded into Rio Tinto's Pilbara release",
+        "production_2025_est_mt": 5,
+        "production_basis": "TODO — only Rio Tinto's attributable share is disclosed; Winning Consortium (Chinese-backed) side is opaque",
+        "report_name": "Included within Rio Tinto Quarterly Operations Review",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://www.riotinto.com/en/news",
+        "primary_source_tier": 1,
+        "reliability": "Medium",
+        "notes": "Currently low volume but scheduled to scale rapidly — worth tracking as a distinct emerging line."
+      }
+    ],
+    "sources": [
+      {
+        "name": "TS Lombard iron ore source tracker — Mine candidates sheet",
+        "url": "TODO — internal working document, not a public URL"
+      }
+    ]
+  },
+  "tightness": {
+    "rating": "TODO — pending analyst assessment",
+    "assessment": "TODO — no automation run yet. Note for the analyst: iron ore has no smelting/refining stage analogous to copper's mine-to-refined chain, so copper's \"concentrate vs refined\" framing does not transfer directly. Consider reframing this section around mine-level supply vs seaborne/port availability (fines vs pellet premium, port stockpiles) rather than reusing copper's language as-is.",
+    "indicators": []
+  },
+  "outlook": {
+    "sources": [
+      {
+        "name": "REQ — Resources and Energy Quarterly (Australia)",
+        "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-all"
+      },
+      {
+        "name": "IBRAM — Instituto Brasileiro de Mineração (Brazil)",
+        "url": "https://ibram.org.br/en/"
+      }
+    ],
+    "scenarios": {
+      "bear": {
+        "years": [],
+        "supply": [],
+        "demand": [],
+        "note": "TODO — populate years/supply/demand once sourced. Cite \"REQ\", \"IBRAM\", or \"internal\" per validate_data.py's provenance check. No REQ/IBRAM equivalent confirmed for Canada — use \"internal\" for Canada-specific assumptions (e.g. Bloom Lake) until a real source is found.",
+        "assumptions": []
+      },
+      "base": {
+        "years": [],
+        "supply": [],
+        "demand": [],
+        "note": "TODO — populate years/supply/demand once sourced. Cite \"REQ\", \"IBRAM\", or \"internal\" per validate_data.py's provenance check. No REQ/IBRAM equivalent confirmed for Canada — use \"internal\" for Canada-specific assumptions (e.g. Bloom Lake) until a real source is found.",
+        "assumptions": []
+      },
+      "bull": {
+        "years": [],
+        "supply": [],
+        "demand": [],
+        "note": "TODO — populate years/supply/demand once sourced. Cite \"REQ\", \"IBRAM\", or \"internal\" per validate_data.py's provenance check. No REQ/IBRAM equivalent confirmed for Canada — use \"internal\" for Canada-specific assumptions (e.g. Bloom Lake) until a real source is found.",
+        "assumptions": []
+      }
+    }
+  },
+  "drivers": {
+    "rating": "TODO — pending analyst assessment",
+    "assessment": "TODO — structural steel-demand narrative pending analyst input (grid, construction, auto and green-steel/EAF framing, mirroring copper's driver methodology).",
+    "end_use": [
+      {
+        "name": "Construction & infrastructure",
+        "detail": "TODO — share pending World Steel Association sourcing"
+      },
+      {
+        "name": "Automotive & transport",
+        "detail": "TODO — share pending World Steel Association sourcing"
+      },
+      {
+        "name": "Machinery & industrial equipment",
+        "detail": "TODO — share pending World Steel Association sourcing"
+      },
+      {
+        "name": "Appliances & other manufacturing",
+        "detail": "TODO — share pending World Steel Association sourcing"
+      }
+    ],
+    "end_use_source": {
+      "name": "World Steel Association — Steel statistics",
+      "url": "https://worldsteel.org/data/",
+      "note": "TODO — URL is confirmed real (source_registry.json); the actual end-use percentage split has not been pulled yet, so no shares are populated below."
+    },
+    "items": [
+      {
+        "name": "China property & construction cycle",
+        "type": "Cyclical",
+        "horizon": "TODO",
+        "direction": "TODO",
+        "momentum": "TODO"
+      },
+      {
+        "name": "Global crude steel production",
+        "type": "Cyclical",
+        "horizon": "TODO",
+        "direction": "TODO",
+        "momentum": "TODO"
+      },
+      {
+        "name": "Green steel / EAF transition",
+        "type": "Structural",
+        "horizon": "TODO",
+        "direction": "TODO",
+        "momentum": "TODO"
+      },
+      {
+        "name": "Infrastructure & grid build-out",
+        "type": "Structural",
+        "horizon": "TODO",
+        "direction": "TODO",
+        "momentum": "TODO"
+      }
+    ],
+    "sources": []
+  },
+  "source_register": [
+    {
+      "tier": 1,
+      "label": "Primary operational evidence",
+      "sources": [
+        {
+          "name": "Rio Tinto",
+          "url": "https://www.riotinto.com/en/news",
+          "scope": "Pilbara (Hamersley, Hope Downs, Robe River), IOC and Simandou"
+        },
+        {
+          "name": "Rio Tinto — SEC EDGAR 6-K filings",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
+          "scope": "Regulated filing cross-check for Rio Tinto disclosures"
+        },
+        {
+          "name": "BHP",
+          "url": "https://www.bhp.com/news/media-centre",
+          "scope": "Western Australia Iron Ore (WAIO)"
+        },
+        {
+          "name": "Fortescue",
+          "url": "https://investors.fortescue.com/en/results-and-operational-performance",
+          "scope": "Chichester and Solomon hubs, Iron Bridge magnetite"
+        },
+        {
+          "name": "Vale",
+          "url": "https://vale.com/investors",
+          "scope": "Carajás / S11D and the Northern System"
+        },
+        {
+          "name": "Anglo American",
+          "url": "https://www.angloamerican.com/media/press-releases",
+          "scope": "Minas-Rio"
+        },
+        {
+          "name": "Champion Iron",
+          "url": "https://www.asx.com.au/markets/company/CIA",
+          "scope": "Bloom Lake"
+        },
+        {
+          "name": "ArcelorMittal — SEC EDGAR 6-K filings",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
+          "scope": "Liberia (Yekepa/Tokadeh) mining segment, reported quarterly"
+        }
+      ]
+    },
+    {
+      "tier": 2,
+      "label": "Market and structural context",
+      "sources": [
+        {
+          "name": "USGS Iron Ore Statistics",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+          "scope": "Annual world production, reserves and China country-level reference"
+        },
+        {
+          "name": "World Steel Association",
+          "url": "https://worldsteel.org/data/",
+          "scope": "Monthly crude steel output by country; end-use share context"
+        },
+        {
+          "name": "SGX iron ore 62% Fe futures (via Investing.com)",
+          "url": "https://www.investing.com/commodities/iron-ore-62-cfr-futures",
+          "scope": "Price reference only — free aggregator, not a primary exchange feed. Revisit if a Platts/S&P Global Commodity Insights subscription becomes available."
+        },
+        {
+          "name": "Australian Office of the Chief Economist — Resources and Energy Quarterly",
+          "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-all",
+          "scope": "Genuine government supply/demand/price outlook forecast — the closest iron ore equivalent to ICSG's role on the copper dashboard"
+        },
+        {
+          "name": "IBRAM (Instituto Brasileiro de Mineração)",
+          "url": "https://ibram.org.br/en/",
+          "scope": "Brazil-specific investment and production forecasts; industry association, lower independence tier than a government source"
+        },
+        {
+          "name": "Natural Resources Canada — Iron ore facts",
+          "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
+          "scope": "Historical/statistical only — not a genuine outlook forecast, so not accepted as a scenario-provenance citation. Included for Canada country-level context."
+        }
+      ]
+    },
+    {
+      "tier": 3,
+      "label": "Broad-news discovery",
+      "sources": [
+        {
+          "name": "GDELT DOC 2.0",
+          "url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+          "scope": "Wide-web event discovery after Tier 1 and Tier 2 checks"
+        }
+      ]
+    }
+  ],
+  "methodology": [
+    {
+      "title": "1. Source order",
+      "body": "The weekly job checks operator releases, regulatory filings (SEC 6-K, ASX, TSX) and government notices first. It then checks sector and statistical bodies: USGS, World Steel Association, Geoscience Australia and Brazil's ANM. Only after those passes does it query GDELT and broad news for events that may not yet appear in primary disclosures."
+    },
+    {
+      "title": "2. Tier definitions",
+      "body": "Tier 1 is an operator IR release or regulatory filing — highest confidence, mine/hub-level detail. Tier 2 is a sector or government statistical body — country or segment-level, lower granularity. Tier 3 is news, GDELT, or other secondary reporting, used only to flag events pending primary confirmation."
+    },
+    {
+      "title": "3. Weekly-job fit",
+      "body": "Every tracked source reports at most quarterly at mine/hub level — there is no genuinely weekly mine-level iron ore disclosure, the same constraint the copper dashboard operates under. The weekly job checks IR pages and filings for new releases (most weeks return nothing) and separately tracks weekly-moving reference series (62% Fe price, freight, China port inventories) so the dashboard stays visibly current between quarterly updates. TODO: those weekly-moving reference series are not yet wired into this dataset."
+    },
+    {
+      "title": "4. Outlook discipline",
+      "body": "Published forecasts are labelled as such. Internal scenario extensions disclose their assumptions and are never presented as third-party forecasts. Scenario notes must cite \"REQ\" (Resources and Energy Quarterly, Australia), \"IBRAM\" (Instituto Brasileiro de Mineração, Brazil) or \"internal\" — there is no confirmed third-party outlook source for Canada, so Canada-specific assumptions use \"internal\" until one is found."
+    },
+    {
+      "title": "5. Audit trail",
+      "body": "Each candidate item records source tier, URL, retrieval time and content fingerprint. Weekly data changes are committed to version control before deployment, giving the team a reproducible history."
+    }
+  ]
+}

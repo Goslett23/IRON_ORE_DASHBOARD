@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TS Lombard weekly iron ore mine disruption and market intelligence dashboard"
+    />
+    <title>TS Lombard | Iron Ore Market Intelligence</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="brand" href="#overview" aria-label="TS Lombard dashboard home">TS LOMBARD</a>
+      <h1>Iron Ore Market Intelligence</h1>
+      <div class="masthead-meta">
+        <span id="update-line">Loading weekly research…</span>
+        <button class="methodology-button" type="button" data-open-methodology>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M5.5 2.5h6l3 3v12h-9zM11.5 2.5v3h3M7.8 9h4.4M7.8 12h4.4" />
+          </svg>
+          Methodology &amp; sources
+        </button>
+      </div>
+    </header>
+
+    <nav class="section-nav" aria-label="Dashboard sections">
+      <a class="active" href="#overview">Overview</a>
+      <a href="#disruptions">Mine disruptions</a>
+      <a href="#tightness">Market tightness</a>
+      <a href="#outlook">Outlook</a>
+      <a href="#drivers">Demand drivers</a>
+    </nav>
+
+    <main id="overview">
+      <section id="kpi-rail" class="kpi-rail" aria-label="Market summary"></section>
+
+      <section id="disruptions" class="dashboard-section">
+        <div class="section-heading">
+          <h2><span>1.</span> Mine Disruption Tracker</h2>
+          <div class="filter-group" aria-label="Filter disruption tracker">
+            <button class="filter active" type="button" data-risk="ALL">All</button>
+            <button class="filter" type="button" data-risk="HIGH">High</button>
+            <button class="filter" type="button" data-risk="RECOVERING">Recovering</button>
+          </div>
+        </div>
+
+        <div class="tracker-layout">
+          <div class="map-region">
+            <div
+              id="mine-map"
+              class="plot plot-map"
+              role="img"
+              aria-label="World map showing tracked iron ore disruptions and major reference operations"
+            ></div>
+            <div class="map-legend" aria-label="Tracked disruption and reference-operation legend">
+              <span><i class="risk-dot high"></i>High</span>
+              <span><i class="risk-dot medium"></i>Medium</span>
+              <span><i class="risk-dot low"></i>Low</span>
+              <span><i class="risk-dot reference"></i>Reference only</span>
+            </div>
+          </div>
+
+          <div class="table-region" tabindex="0" aria-label="Ranked disruption table">
+            <table class="mine-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Mine</th>
+                  <th>Country</th>
+                  <th>Status</th>
+                  <th>Risk</th>
+                  <th>Trend</th>
+                </tr>
+              </thead>
+              <tbody id="mine-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside id="mine-detail" class="evidence-drawer" aria-live="polite" hidden></aside>
+      </section>
+
+      <section id="tightness" class="dashboard-section">
+        <div class="section-heading">
+          <h2><span>2.</span> Current Market Tightness</h2>
+        </div>
+        <div id="tightness-grid" class="tightness-grid"></div>
+        <details class="analysis-disclosure">
+          <summary>View market assessment</summary>
+          <p id="tightness-assessment"></p>
+        </details>
+      </section>
+
+      <section id="outlook" class="dashboard-section">
+        <div class="section-heading">
+          <h2><span>3.</span> 2–3 Year Supply / Demand Outlook</h2>
+          <div class="scenario-tabs" aria-label="Scenario selector">
+            <button type="button" data-scenario="bear">Bear</button>
+            <button class="active" type="button" data-scenario="base">Base</button>
+            <button type="button" data-scenario="bull">Bull</button>
+          </div>
+        </div>
+
+        <div class="outlook-layout">
+          <figure class="outlook-chart">
+            <figcaption>Seaborne iron ore supply vs demand</figcaption>
+            <div
+              id="outlook-plot"
+              class="plot"
+              role="img"
+              aria-label="Seaborne iron ore supply and demand outlook"
+            ></div>
+          </figure>
+          <aside class="assumptions-panel">
+            <h3 id="assumption-title">Base-case assumptions</h3>
+            <div id="assumptions"></div>
+          </aside>
+        </div>
+
+        <details class="analysis-disclosure">
+          <summary>Scenario methodology &amp; sources</summary>
+          <p id="outlook-note"></p>
+        </details>
+      </section>
+
+      <section id="drivers" class="dashboard-section">
+        <div class="section-heading">
+          <h2><span>4.</span> Cyclical &amp; Structural Demand Drivers</h2>
+        </div>
+        <div class="drivers-layout">
+          <figure class="demand-origin-chart">
+            <figcaption>Where current steel demand for iron ore comes from</figcaption>
+            <div
+              id="drivers-plot"
+              class="plot drivers-plot"
+              role="img"
+              aria-label="Share of global steel end-use by sector"
+            ></div>
+            <p id="drivers-source" class="drivers-source"></p>
+          </figure>
+          <section class="driver-signals" aria-labelledby="driver-signals-title">
+            <div class="driver-signals-heading">
+              <h3 id="driver-signals-title">Driver signals</h3>
+              <p>Evidence is research confidence, not demand share.</p>
+            </div>
+            <div id="driver-kpis" class="driver-kpis"></div>
+          </section>
+        </div>
+        <details class="analysis-disclosure">
+          <summary>View demand assessment</summary>
+          <div id="driver-assessment"></div>
+        </details>
+      </section>
+
+      <details id="source-register" class="source-register">
+        <summary>Source register</summary>
+        <div id="source-groups"></div>
+      </details>
+    </main>
+
+    <footer class="site-footer">
+      <span id="footer-sources">Sources checked —</span>
+      <span id="next-refresh">Update cadence: Weekly</span>
+    </footer>
+
+    <dialog id="methodology-dialog">
+      <div class="dialog-heading">
+        <div>
+          <span>TS LOMBARD</span>
+          <h2>Methodology &amp; sources</h2>
+        </div>
+        <form method="dialog">
+          <button class="dialog-close" aria-label="Close methodology dialog">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" /></svg>
+          </button>
+        </form>
+      </div>
+      <div id="methodology-content"></div>
+    </dialog>
+
+    <script src="https://cdn.plot.ly/plotly-3.7.0.min.js" charset="utf-8" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

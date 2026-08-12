@@ -1,0 +1,105 @@
+{
+  "user_agent": "TS-Lombard-IronOre-Tracker/1.0 (+internal research; contact: josh.goslett@tslombard.com)",
+  "timeout_seconds": 20,
+  "primary": [
+    {
+      "id": "rio-tinto-sec-6k",
+      "name": "Rio Tinto — SEC EDGAR 6-K filings index",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
+      "note": "Regulated filing feed, not a corporate IR page. Most stable source in the list — SEC EDGAR also has a real JSON API at data.sec.gov/submissions/CIK0000863064.json if we want to move off HTML scraping later.",
+      "terms": ["iron ore", "Pilbara", "operations review", "quarterly production", "Hamersley", "Simandou"]
+    },
+    {
+      "id": "bhp-media-releases",
+      "name": "BHP — Media centre releases (Operational Review index)",
+      "url": "https://www.bhp.com/news/media-centre",
+      "note": "HTML index page. The Operational Review itself links to a downloadable Excel data book — track the index page for the new release, handle the Excel file as a separate follow-up fetch once flagged, not through the text fingerprint.",
+      "terms": ["operational review", "iron ore", "Western Australia Iron Ore", "WAIO", "Samarco"]
+    },
+    {
+      "id": "fortescue-results-index",
+      "name": "Fortescue — Results and operational performance index",
+      "url": "https://investors.fortescue.com/en/results-and-operational-performance",
+      "note": "HTML index page listing quarterly production reports with dates and PDF links. Track this page, not the PDF links directly — the fetcher has no PDF text extraction yet.",
+      "terms": ["quarterly production report", "Pilbara", "Iron Bridge", "Chichester", "Solomon", "shipments"]
+    },
+    {
+      "id": "vale-production-sales-landing",
+      "name": "Vale — Production and sales report landing page",
+      "url": "https://vale.com/investors",
+      "note": "Vale's report pages follow a predictable slug (vale.com/w/production-and-sales-report-{q}q{yy}), confirmed across 1Q25, 2Q25 and prior years. Track this index/landing page rather than constructing the next slug directly, since CMS slug patterns can break silently without warning.",
+      "terms": ["production and sales", "iron ore", "Northern System", "S11D", "Carajás"]
+    },
+    {
+      "id": "anglo-american-production-report",
+      "name": "Anglo American — Press releases index (quarterly production reports)",
+      "url": "https://www.angloamerican.com/media/press-releases",
+      "note": "Confirmed: Minas-Rio is broken out at quarterly cadence with production, realised price (vs Fastmarkets 65% Fe benchmark) and grade all separately reported from Kumba. PDF filenames follow a predictable pattern (q{n}-{year}-production-report.pdf) but track the index page, not the constructed URL, consistent with Vale and Fortescue.",
+      "terms": ["Minas-Rio", "premium iron ore", "production report", "Fastmarkets"]
+    },
+    {
+      "id": "champion-iron-asx-announcements",
+      "name": "Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
+      "url": "https://www.asx.com.au/markets/company/CIA",
+      "note": "ASX company announcements page for Champion Iron (ASX: CIA). Genuinely single-asset (Bloom Lake), so this is the cleanest true mine-level source in the list despite smaller volume.",
+      "terms": ["Bloom Lake", "quarterly activities report", "iron ore concentrate"]
+    },
+    {
+      "id": "arcelormittal-liberia-sec-6k",
+      "name": "ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
+      "note": "Gap identified and fixed: mine #6 (ArcelorMittal Liberia, Yekepa/Tokadeh) was in the original candidate sheet but missing from this registry, so the weekly job was silently never checking it. Verified via the Q1 2026 6-K earnings release exhibit (CIK 1243429): the Mining segment table breaks out iron ore production and shipment volumes quarterly, separating ArcelorMittal Liberia from ArcelorMittal Mines Canada (AMMC) in the same table. This is better disclosure than the original candidate sheet assumed (it flagged 'may only appear in annual report, not quarterly' — that was incorrect). Same regulated-filing-feed pattern as Rio Tinto, most stable source type in the registry.",
+      "terms": ["Liberia", "iron ore production", "iron ore shipment", "Mining segment", "AMMC"]
+    }
+  ],
+  "market_context": [
+    {
+      "id": "usgs-iron-ore-mcs",
+      "name": "USGS — Mineral Commodity Summaries (iron ore)",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "note": "Annual cadence only. Use for country-level cross-checks and the China reference-only row, not weekly signal.",
+      "terms": ["iron ore", "world production", "China", "reserves"]
+    },
+    {
+      "id": "world-steel-association-stats",
+      "name": "World Steel Association — Steel statistics",
+      "url": "https://worldsteel.org/data/",
+      "note": "Monthly crude steel output by country — the demand-side context metric for iron ore, mirrors how the copper dashboard uses ICSG refined balance context.",
+      "terms": ["crude steel production", "China", "monthly"]
+    },
+    {
+      "id": "iron-ore-futures-price-context",
+      "name": "SGX iron ore 62% Fe futures — price reference (via Investing.com, free aggregator quote)",
+      "url": "https://www.investing.com/commodities/iron-ore-62-cfr-futures",
+      "note": "Platts IODEX itself is paywalled, and SGX's own historical settlement data is Platts/TSI-based underneath, so there is no genuinely free primary feed. This is a free aggregator page showing SGX-listed iron ore futures quotes — lower confidence than a primary exchange source, classify as Tier 2 context only, not a Tier 1 fact source. Revisit if TS Lombard obtains a Platts/S&P Global Commodity Insights subscription.",
+      "terms": ["iron ore", "62% Fe", "futures", "settlement"]
+    },
+    {
+      "id": "aus-req-outlook",
+      "name": "Australian Office of the Chief Economist — Resources and Energy Quarterly (iron ore outlook)",
+      "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-all",
+      "note": "This is the registered third-party outlook/forecaster for iron ore, equivalent to ICSG's role in the copper registry — publishes genuine supply/demand/price forecasts (2-year short-term each quarter, 5-year medium-term in the March edition), not just historical stats. Free, government-published, quarterly cadence. Caveat: forecasts are framed around Australian export volumes/earnings with global supply/demand as context driving the price outlook, not a pure global balance the way ICSG's copper forecast is — still the closest genuine outlook-forecaster available for iron ore. validate_data.py's outlook-scenario check should accept notes citing \"REQ\" or \"Resources and Energy Quarterly\" as the third-party forecaster string, alongside \"internal\".",
+      "terms": ["Resources and Energy Quarterly", "iron ore", "forecast", "outlook", "export volumes"]
+    },
+    {
+      "id": "ibram-brazil-outlook",
+      "name": "IBRAM (Instituto Brasileiro de Mineração) — sector investment and production forecasts",
+      "url": "https://ibram.org.br/en/",
+      "note": "Publishes multi-year iron ore investment and production forecasts for Brazil (e.g. 2026-2030 cycle). Free access. Caveat: IBRAM is Brazil's mining industry association, not a government body — treat as a lower-independence tier than REQ (Australian government) or USGS. Useful as regional context for Vale, Minas-Rio; not a substitute for a government-published outlook. validate_data.py's outlook-scenario check can accept notes citing \"IBRAM\" for Brazil-specific context, alongside \"internal\" and \"REQ\".",
+      "terms": ["IBRAM", "iron ore", "investment", "production forecast", "Brazil"]
+    },
+    {
+      "id": "nrcan-canada-stats",
+      "name": "Natural Resources Canada — Iron ore facts / Annual Statistics of Mineral Production",
+      "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
+      "note": "No genuine ongoing iron-ore outlook publication exists for Canada comparable to REQ (Australia) or IBRAM (Brazil) — checked bank research (RBC, TD, Deutsche Bank) and found only sporadic, largely paywalled sell-side notes, not a structured free forecast. NRCan is a government body and the best available free source, but this is predominantly historical/statistical (production, trade, exploration spend), with only a thin one-year-ahead forecast component collected as part of its Annual Mineral Production Survey. Flag this gap explicitly rather than overstate what NRCan provides — it is not equivalent in forecasting depth to the Australian or Brazilian sources above.",
+      "terms": ["iron ore", "Canada", "production", "exports", "Natural Resources Canada"]
+    }
+  ],
+  "wide_web": {
+    "endpoint": "https://api.gdeltproject.org/api/v2/doc/doc",
+    "query": "iron ore mine disruption OR strike OR shutdown OR flood",
+    "max_records": 40,
+    "timespan": "7d"
+  }
+}

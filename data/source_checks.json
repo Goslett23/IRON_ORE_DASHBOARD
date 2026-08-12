@@ -1,0 +1,148 @@
+{
+  "generated_at": "2026-08-12T14:16:15+00:00",
+  "checks": [
+    {
+      "id": "rio-tinto-sec-6k",
+      "name": "Rio Tinto — SEC EDGAR 6-K filings index",
+      "tier": 1,
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "bhp-media-releases",
+      "name": "BHP — Media centre releases (Operational Review index)",
+      "tier": 1,
+      "url": "https://www.bhp.com/news/media-centre",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "fortescue-results-index",
+      "name": "Fortescue — Results and operational performance index",
+      "tier": 1,
+      "url": "https://investors.fortescue.com/en/results-and-operational-performance",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "vale-production-sales-landing",
+      "name": "Vale — Production and sales report landing page",
+      "tier": 1,
+      "url": "https://vale.com/investors",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "anglo-american-production-report",
+      "name": "Anglo American — Press releases index (quarterly production reports)",
+      "tier": 1,
+      "url": "https://www.angloamerican.com/media/press-releases",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "champion-iron-asx-announcements",
+      "name": "Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
+      "tier": 1,
+      "url": "https://www.asx.com.au/markets/company/CIA",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "arcelormittal-liberia-sec-6k",
+      "name": "ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
+      "tier": 1,
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "usgs-iron-ore-mcs",
+      "name": "USGS — Mineral Commodity Summaries (iron ore)",
+      "tier": 2,
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "world-steel-association-stats",
+      "name": "World Steel Association — Steel statistics",
+      "tier": 2,
+      "url": "https://worldsteel.org/data/",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "iron-ore-futures-price-context",
+      "name": "SGX iron ore 62% Fe futures — price reference (via Investing.com, free aggregator quote)",
+      "tier": 2,
+      "url": "https://www.investing.com/commodities/iron-ore-62-cfr-futures",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "aus-req-outlook",
+      "name": "Australian Office of the Chief Economist — Resources and Energy Quarterly (iron ore outlook)",
+      "tier": 2,
+      "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-all",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "ibram-brazil-outlook",
+      "name": "IBRAM (Instituto Brasileiro de Mineração) — sector investment and production forecasts",
+      "tier": 2,
+      "url": "https://ibram.org.br/en/",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    },
+    {
+      "id": "nrcan-canada-stats",
+      "name": "Natural Resources Canada — Iron ore facts / Annual Statistics of Mineral Production",
+      "tier": 2,
+      "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
+      "checked_at": "2026-08-12T14:16:15+00:00",
+      "status": "offline-skip",
+      "fingerprint": "",
+      "changed": false,
+      "keyword_hits": []
+    }
+  ]
+}
