@@ -481,6 +481,67 @@ td {
   color: var(--blue-700);
 }
 
+.reference-region {
+  border-top: 1px solid var(--divider);
+  padding: 16px 20px 4px;
+}
+
+.reference-region h3 {
+  margin: 0 0 4px;
+  color: var(--blue-900);
+  font-size: 13px;
+}
+
+.reference-region h3 span {
+  margin-left: 8px;
+  color: var(--blue-700);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.reference-table {
+  table-layout: fixed;
+}
+
+.reference-table th:first-child {
+  width: 22%;
+}
+
+.reference-table th:nth-child(2) {
+  width: 12%;
+}
+
+.reference-table th:nth-child(3) {
+  width: 40%;
+}
+
+.reference-table th:nth-child(4) {
+  width: 11%;
+}
+
+.reference-table th:nth-child(5) {
+  width: 15%;
+}
+
+.reference-table td {
+  cursor: default;
+}
+
+.reference-table .reference-status {
+  color: var(--blue-900);
+  font-weight: 700;
+}
+
+.reference-table .reference-status small {
+  display: block;
+  color: var(--blue-700);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
 .evidence-drawer {
   display: grid;
   grid-template-columns: 1.1fr 1.5fr 1.2fr;
