@@ -1,10 +1,10 @@
 {
   "meta": {
-    "as_of": "12 August 2026",
-    "generated_at": "2026-08-12T14:16:15+00:00",
-    "next_refresh": "19 August 2026",
-    "sources_checked": 0,
-    "review_status": "offline validation",
+    "as_of": "13 August 2026",
+    "generated_at": "2026-08-13T15:11:56+00:00",
+    "next_refresh": "20 August 2026",
+    "sources_checked": 16,
+    "review_status": "automated source pass; no flagged changes",
     "schema_version": 1
   },
   "kpis": [
@@ -102,7 +102,7 @@
     }
   ],
   "reference_mines": {
-    "note": "Tracked major iron ore operations shown for geographic context; entries here have no active disruption assessment. Vale's Carajás/Northern System and Rio Tinto's Pilbara operations moved to the Mine Disruption Tracker (see disruptions above) and are intentionally not duplicated here. Coordinates are representative hub/district-level points (public geographic facts, not sourced from a market/financial source) — several of these are multi-pit hubs, not a single mine, so treat precision as approximate. China's domestic aggregate is tracked as country-level context via USGS/NBS statistics only and is deliberately not listed here or plotted, since it has no single representative mine location.",
+    "note": "Tracked major iron ore operations shown for geographic context; entries here have no active disruption assessment. Vale's Carajás/Northern System and Rio Tinto's Pilbara operations moved to the Mine Disruption Tracker (see disruptions above) and are intentionally not duplicated here. Coordinates are representative hub/district-level points (public geographic facts, not sourced from a market/financial source) — several of these are multi-pit hubs, not a single mine, so treat precision as approximate. China's domestic aggregate is tracked as country-level context via USGS/NBS statistics only and is deliberately not listed here or plotted, since it has no single representative mine location. Expanded from 6 to 11 entries in August 2026 to close real coverage gaps: Kumba (South Africa), LKAB (Sweden), IOC (Canada) and Samarco (Brazil) were previously untracked major producers; NMDC (India) is a wholly new addition covering a market not previously represented on this dashboard at all. See TODO.md for the sourcing caveats on each new row and for gaps still outstanding (NMDC's Donimalai mine, and Ukraine's war-affected iron ore sector, which was investigated but not added — see TODO.md for why). All 11 items were given a current `status`/`status_detail`/`status_source` block on 13 Aug 2026 (previously absent, unlike `disruptions` entries) by manually checking each mine's already weekly-tracked primary source (see automation/source_registry.json's `primary` list) for its latest quarterly release. This is a one-time analyst pass, not new automation: the weekly job (automation/update_weekly.py) only fingerprints these same URLs for change detection and flags them into data/candidates.json for review — it does not itself re-extract or rewrite the status text. These fields should be refreshed the same way each time the corresponding source is flagged as changed, per the methodology's weekly-job-fit note.",
     "items": [
       {
         "name": "Western Australia Iron Ore (WAIO)",
@@ -118,7 +118,17 @@
         "primary_source_url": "https://www.bhp.com/news/media-centre",
         "primary_source_tier": 1,
         "reliability": "High",
-        "notes": "Confirmed. Also publishes a downloadable Excel data book alongside each review — good automation target once the fetcher supports it (currently HTML/JSON only, see TODO.md)."
+        "notes": "Confirmed. Also publishes a downloadable Excel data book alongside each review — good automation target once the fetcher supports it (currently HTML/JSON only, see TODO.md).",
+        "status": "Record output / on guidance",
+        "status_detail": "FY2026 WAIO production was a record 291.2 Mt (100% basis) / 256.9 Mt (BHP attributable share), broadly flat y/y; Q4 FY26 (June quarter) output of 66.2 Mt was up 9% q/q. Group iron ore output hit a record 264.7 Mt, within FY2026 guidance of 258–269 Mt; FY2027 WAIO guidance is set at 253–264 Mt (BHP share), underpinned by the newly approved ~US$900m Ministers North project (first ore FY2028-29).",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "BHP — Operational review for the year ended 30 June 2026",
+          "url": "https://www.bhp.com/news/media-centre/releases/2026/07/bhp-operational-review-for-the-year-ended-30-june-2026",
+          "published": "16 Jul 2026",
+          "tier": 1,
+          "verification_note": "bhp.com returned HTTP 403 to automated/agent fetch on this and the weekly source-check page; figures cross-verified against SteelOrbis and Kalkine, which quote the release directly."
+        }
       },
       {
         "name": "Pilbara operations (Chichester + Solomon hubs)",
@@ -134,7 +144,16 @@
         "primary_source_url": "https://investors.fortescue.com/en/results-and-operational-performance",
         "primary_source_tier": 1,
         "reliability": "High",
-        "notes": "Confirmed. Iron Bridge (magnetite) is a useful separate line for grade-mix tracking."
+        "notes": "Confirmed. Iron Bridge (magnetite) is a useful separate line for grade-mix tracking.",
+        "status": "Record FY26 volumes, on cost guidance",
+        "status_detail": "Combined Chichester/Solomon (Hematite) shipments reached a record 192.3 Mt in FY26, +1% y/y (Q4 FY26: 50.0 Mt, -5% y/y but +8% q/q). FY26 C1 unit cost of US$18.74/wmt was within guidance; FY27 guidance implies Hematite shipments of roughly 186–193 Mt at a higher C1 cost of US$20.50–21.75/wmt. Excludes Iron Bridge (magnetite), tracked separately under the Mine Disruption Tracker.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "Fortescue — June 2026 Quarterly Production Report",
+          "url": "https://content.fortescue.com/fortescue17114-fortescueeb60-productionbbdb-8be5/media/project/fortescueportal/shared/documents/regulatory/asx-announcements/automated/03116249-june-2026-quarterly-production-report.pdf",
+          "published": "31 Jul 2026",
+          "tier": 1
+        }
       },
       {
         "name": "Minas-Rio",
@@ -150,7 +169,16 @@
         "primary_source_url": "https://www.angloamerican.com/media/press-releases",
         "primary_source_tier": 1,
         "reliability": "High",
-        "notes": "Small volume but genuinely mine-level, unlike the hub-level majors — useful cross-check asset. Needs confirmation of exact PDF naming/URL pattern before deeper scraper build."
+        "notes": "Small volume but genuinely mine-level, unlike the hub-level majors — useful cross-check asset. Needs confirmation of exact PDF naming/URL pattern before deeper scraper build.",
+        "status": "Stable operations, on guidance",
+        "status_detail": "Q2 2026 production was 6.55 Mt of pellet feed (-2% y/y, +3% q/q); H1 2026 output of 12.9 Mt (-2% y/y) keeps the mine on track for FY2026 guidance of 24–26 Mt at a unit cost of ~US$36/t. H1 2026 realised price of US$82/wmt was 1% above the Fastmarkets 65% Fe benchmark.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "Anglo American — Production Report for the second quarter ended 30 June 2026",
+          "url": "https://www.angloamerican.com/media/press-releases/2026/23-07-2026",
+          "published": "23 Jul 2026",
+          "tier": 1
+        }
       },
       {
         "name": "Liberia operations (Yekepa / Tokadeh)",
@@ -166,7 +194,17 @@
         "primary_source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
         "primary_source_tier": 1,
         "reliability": "High",
-        "notes": "Registry gap fixed — now covered by automation/source_registry.json's arcelormittal-liberia-sec-6k entry. Verified via the Q1 2026 6-K exhibit: the Mining segment table breaks out Liberia iron ore production/shipments quarterly, separate from ArcelorMittal Mines Canada (AMMC). This is better disclosure than originally assumed — the candidate sheet's 'may only appear in annual report, not quarterly' caveat was incorrect."
+        "notes": "Registry gap fixed — now covered by automation/source_registry.json's arcelormittal-liberia-sec-6k entry. Verified via the Q1 2026 6-K exhibit: the Mining segment table breaks out Liberia iron ore production/shipments quarterly, separate from ArcelorMittal Mines Canada (AMMC). This is better disclosure than originally assumed — the candidate sheet's 'may only appear in annual report, not quarterly' caveat was incorrect.",
+        "status": "Record H1 output, Phase 2 ramp-up on track",
+        "status_detail": "H1 2026 production of 7.7 Mt was up 89.9% y/y, driven by continued ramp-up of the new concentrator (Phase 2, targeting 20 Mtpa). Q2 2026 shipments were constrained by heavy rainfall affecting port operations.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "ArcelorMittal — Form 6-K, Second-Quarter and First Half 2026 Interim Financial Report",
+          "url": "https://www.sec.gov/Archives/edgar/data/1243429/000124342926000075/mt-20260630.htm",
+          "published": "31 Jul 2026",
+          "tier": 1,
+          "verification_note": "sec.gov blocked automated/agent fetch on the browse-edgar and Archives paths (HTTP 403, likely User-Agent-based bot protection); retrieved via a compliant User-Agent header instead."
+        }
       },
       {
         "name": "Bloom Lake",
@@ -182,7 +220,17 @@
         "primary_source_url": "https://www.asx.com.au/markets/company/CIA",
         "primary_source_tier": 1,
         "reliability": "High",
-        "notes": "Confirmed — good candidate for exact mine-level tracking despite smaller scale. No REQ/IBRAM-equivalent third-party outlook forecaster confirmed for Canada — outlook scenario notes touching this asset should cite \"internal\" until a real source is found."
+        "notes": "Confirmed — good candidate for exact mine-level tracking despite smaller scale. No REQ/IBRAM-equivalent third-party outlook forecaster confirmed for Canada — outlook scenario notes touching this asset should cite \"internal\" until a real source is found.",
+        "status": "Stable output, DRPF ramp-up underway",
+        "status_detail": "Q1 FY2027 (quarter ended 30 Jun 2026) concentrate production was 3.5 Mwmt, roughly flat y/y; sales fell ~18% y/y to 3.1 Mdmt on shipment-timing effects from the Direct Reduction Pellet Feed (DRPF) project's commissioning ramp-up, which produced its first DR-grade concentrate (up to 69% Fe) in late June 2026.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "Champion Iron — FY2027 First Quarter Results",
+          "url": "https://newsroom.championiron.com/2026-07-29-CHAMPION-IRON-REPORTS-ITS-FY2027-FIRST-QUARTER-RESULTS",
+          "published": "29 Jul 2026",
+          "tier": 1,
+          "verification_note": "The tracked ASX company page (asx.com.au/markets/company/CIA) is a JS-rendered SPA that returns no announcement content via automated fetch; sourced via Champion Iron's own newsroom, which republishes the same ASX-lodged release verbatim."
+        }
       },
       {
         "name": "Simandou (SimFer / Winning Consortium blocks)",
@@ -198,7 +246,143 @@
         "primary_source_url": "https://www.riotinto.com/en/news",
         "primary_source_tier": 1,
         "reliability": "Medium",
-        "notes": "Currently low volume but scheduled to scale rapidly — worth tracking as a distinct emerging line."
+        "notes": "Currently low volume but scheduled to scale rapidly — worth tracking as a distinct emerging line.",
+        "status": "Ramping up — construction >75% complete",
+        "status_detail": "SimFer (Rio Tinto/Chinalco JV) shipped first ore in Dec 2025; as of Rio Tinto's Q2 2026 release, mine and port construction are each over three-quarters complete, with full rail commissioning achieved in Q1 2026. FY2026 Simandou sales guidance is 5–10 Mt (100% basis) on a 30-month ramp-up toward SimFer's 60 Mtpa nameplate (27 Mtpa Rio Tinto share). Two fatal contractor incidents in H1 2026 triggered a temporary shutdown and a new independent Simandou Safety Advisory Panel. No distinct primary-sourced update was found for the separate Winning Consortium Simandou (WCS) blocks — WCS volumes are currently only visible via third-party shipment tracking (Kpler, cited by Fastmarkets/S&P Global), not a WCS or Rio Tinto filing.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "Rio Tinto — releases second quarter 2026 production results",
+          "url": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "published": "15 Jul 2026",
+          "tier": 1
+        }
+      },
+      {
+        "name": "Kumba Iron Ore (Sishen + Kolomela)",
+        "country": "South Africa",
+        "lat": -27.74,
+        "lon": 22.99,
+        "operator": "Anglo American, via JSE-listed, majority-owned Kumba Iron Ore Limited",
+        "reporting_level": "Hub-level; Sishen and Kolomela are run as an integrated pair and reported together each quarter",
+        "production_2025_est_mt": 36.1,
+        "production_basis": "TODO — attributable share not yet confirmed; figure is Kumba's own consolidated FY2025 total (100%-basis, not yet split to Anglo American's attributable share)",
+        "report_name": "Production and Sales Report (quarterly) + FY trading statement",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://www.angloamericankumba.com/media/press-releases",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "FY2025 production of 36.1 Mt (+1% y/y) per Kumba's Q4/FY2025 production and sales report and trading statement (5 Feb 2026), covering the two integrated Northern Cape mines Sishen (near Kathu) and Kolomela (near Postmasburg, ~65km south). Plotted at Sishen's coordinates as the larger of the pair, consistent with how WAIO and the Fortescue Pilbara hub are single-pinned here. A distinct operating entity from Anglo American's Minas-Rio (Brazil), already tracked separately above — this was a real registry gap, not a duplicate.",
+        "status": "On guidance, but Kolomela output weak",
+        "status_detail": "Q2 2026 production was 8.844 Mt (-4% y/y): Sishen +1% y/y to 6.479 Mt, Kolomela -16% y/y to 2.365 Mt. FY2026 guidance held at 31–33 Mt production / 35–37 Mt sales, despite a planned 10-day Transnet maintenance shutdown in May 2026 that slowed Saldanha Bay port throughput (Tippler 3 still in slow cold-commissioning after Ore Corridor Restoration works).",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "Kumba — Production and Sales Report for the second quarter ended 30 June 2026",
+          "url": "https://www.angloamericankumba.com/media/press-releases/2026/23-07-2026",
+          "published": "23 Jul 2026",
+          "tier": 1
+        }
+      },
+      {
+        "name": "LKAB Swedish operations (Kiruna + Malmberget/Svappavaara)",
+        "country": "Sweden",
+        "lat": 67.84,
+        "lon": 20.19,
+        "operator": "LKAB (wholly Swedish state-owned)",
+        "reporting_level": "Company-wide delivery total; Kiruna (Kiirunavaara), Malmberget and Svappavaara are not separately broken out in the year-end summary used here",
+        "production_2025_est_mt": 26,
+        "production_basis": "TODO — this is 2025 deliveries of iron ore products, not confirmed mine-head production, and is company-wide rather than mine-by-mine; no minority share to net out since LKAB is 100% state-owned, but the production-vs-delivered-tonnage basis still needs reconciling against how other rows in this table define their figure",
+        "report_name": "Year-end Report / Interim Report",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://lkab.com/en/press/",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "~26 Mt of iron ore products delivered in 2025 per LKAB's Year-end Report 2025, recovering from a prior year hit by production stoppages and disruption on the Iron Ore Line (the Kiruna–Narvik/Luleå rail corridor — itself worth tracking as a chokepoint). LKAB supplies roughly 86% of the EU's iron ore, making this the most structurally important European supply line not previously tracked here. Plotted at Kiruna (Kiirunavaara), the flagship mine and the world's largest underground iron ore mine; Malmberget (near Gällivare) is a second major LKAB pit not separately pinned.",
+        "status": "Stable output, sharply weaker earnings",
+        "status_detail": "Q2 2026 delivery volumes held at 6.0 Mt (vs 6.1 Mt in Q2 2025), described by LKAB as \"on par with\" the prior year despite Kiruna production difficulties and delivery disruption tied to Strait of Hormuz-related redirection. Operating profit collapsed to SEK 63m (from SEK 1,074m a year earlier) on FX/hedging effects, higher energy costs and rising Kiruna urban-transformation spend. Figures are LKAB-wide (Kiruna, Malmberget, Svappavaara combined) — not split by mine.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "LKAB — Interim Report April-June 2026: Lower earnings weighed down by foreign exchange effects and increased costs",
+          "url": "https://lkab.com/en/press/interim-report-april-june-2026-lower-earnings-weighed-down-by-foreign-exchange-effects-and-increased-costs/",
+          "published": "13 Aug 2026",
+          "tier": 1
+        }
+      },
+      {
+        "name": "Iron Ore Company of Canada (IOC)",
+        "country": "Canada",
+        "lat": 52.95,
+        "lon": -66.91,
+        "operator": "Rio Tinto (58.7%) / Mitsubishi Corporation (26.2%) / Labrador Iron Ore Royalty Corporation (15.1%)",
+        "reporting_level": "Single-asset — mine, concentrator and pellet plant at Labrador City, linked by a 418km rail line to the port at Sept-Îles, Quebec",
+        "production_2025_est_mt": 16.5,
+        "production_basis": "TODO — figure is the lower end of FY2025 full-year saleable-production guidance (16.5-19.4 Mt range, expected at the lower end per Q3 2025 reporting), not yet a confirmed actual; not yet split to Rio Tinto's 58.7% attributable share",
+        "report_name": "Quarterly production report (via Rio Tinto) / Labrador Iron Ore Royalty Corporation news releases",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://labradorironore.com/news/",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Genuinely single-asset, unlike Rio Tinto's hub-level Pilbara disclosure — a useful mine-level cross-check. Labrador Iron Ore Royalty Corporation (TSX-listed, holds the 15.1% interest) publishes IOC's quarterly saleable-production figures as a regulated filer; IOC was already within the existing Rio Tinto SEC 6-K registry entry's stated scope, but this reference_mines row was previously missing entirely. Annual capacity is 23 Mt of concentrate, of which 12.5 Mt can be pelletised.",
+        "status": "Below guidance / output reset",
+        "status_detail": "Q2 2026 saleable production was 2.9 Mt (2.2 Mt pellets + 0.8 Mt concentrate), down 31% y/y and 15% q/q. LIORC now expects full-year 2026 sales at or below the low end of a revised 15–18 Mt guidance range — down from the 16.5–19.4 Mt range this row's production_2025_est_mt note still cites — as IOC's multi-year \"strategic reset\" prioritises pit health and cost discipline over volume; guidance is also flagged as subject to recent regional forest-fire impact.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "Labrador Iron Ore Royalty Corporation — Results for the second quarter ended June 30, 2026",
+          "url": "https://labradorironore.com/news/labrador-iron-ore-royalty-corporation-results-fo-15380/",
+          "published": "05 Aug 2026",
+          "tier": 1
+        }
+      },
+      {
+        "name": "Samarco (Germano Complex)",
+        "country": "Brazil",
+        "lat": -20.2,
+        "lon": -43.51,
+        "operator": "Samarco Mineração (Vale 50% / BHP 50% joint venture)",
+        "reporting_level": "Single-asset JV, reported directly by Samarco and referenced in both Vale's and BHP's own segment disclosures",
+        "production_2025_est_mt": 15,
+        "production_basis": "TODO — attributable share not yet confirmed; figure is Samarco's own 2025 target (pellets + fines combined) at the JV level, before any 50/50 split to Vale or BHP",
+        "report_name": "Company press releases (Samarco); cross-referenced in Vale and BHP production reports",
+        "cadence": "Quarterly (Vale/BHP) / as-published (Samarco)",
+        "primary_source_url": "https://www.samarco.com/",
+        "primary_source_tier": 1,
+        "reliability": "Medium",
+        "notes": "Restarted in 2020 after the 2015 Fundao tailings dam disaster; targeting 15 Mt of pellets and fines in 2025 (roughly 60% of pre-disaster capacity) after doubling installed capacity in December 2024, with full capacity targeted by 2028 behind a >US$1bn investment. Vale and BHP signed a combined R$170bn (~US$28bn) disaster settlement with Brazil in 2025 — material enough to belong on this dashboard even before full-capacity restart. Germano is the mining/concentration complex near Mariana, Minas Gerais (pelletising happens separately at the Ubu plant in Anchieta, Espirito Santo); plotted at Germano to match this table's mine-site convention. Reliability marked Medium pending confirmation of Samarco's own publication cadence, since Vale and BHP corroborate the target without restating it on a fixed schedule.",
+        "status": "Ramping up, ~60% of capacity",
+        "status_detail": "Q2 2026 output of 3.9 Mt pellets/fines (+4% q/q) brought H1 2026 production to 7.7 Mt (+8% y/y) and sales to 7.1 Mt (+4% y/y); the JV continues to operate at roughly 60% of installed capacity, consistent with 2025's full-year target, while advancing a ~R$13.8bn (~US$2.8bn) investment programme targeting full-capacity restoration by 2028.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "Samarco Q2 2026 operational preview, as reported by Revista Mineração",
+          "url": "https://revistamineracao.com.br/2026/07/24/producao-de-minerio-de-ferro-da-samarco-cresce-4-no-2t26/",
+          "published": "24 Jul 2026",
+          "tier": 1,
+          "verification_note": "samarco.com published the equivalent Q1 2026 operational update directly on-site (confirming the ~60% capacity figure in Samarco's own words), but the Q2 2026 figures were distributed only via an investor-relations PDF (not parseable) rather than the public news page; figures are corroborated identically across multiple independent Brazilian mining-trade outlets citing the same company-issued release."
+        }
+      },
+      {
+        "name": "NMDC - Bailadila Complex (Kirandul/Bacheli)",
+        "country": "India",
+        "lat": 18.63,
+        "lon": 81.26,
+        "operator": "NMDC Limited (Government of India enterprise)",
+        "reporting_level": "State-level complex; Bailadila's Kirandul and Bacheli deposits are reported together, separate from NMDC's smaller Donimalai mine in Karnataka (not separately plotted here)",
+        "production_2025_est_mt": "TODO — complex-level split not yet confirmed; NMDC's company-wide FY2025-26 total across Bailadila and Donimalai was a record 53.15 Mt (+21% y/y), with Kirandul, Bacheli and Donimalai each posting best-ever output",
+        "production_basis": "TODO — attributable share not applicable (100% government-owned); production-vs-sales basis not yet confirmed",
+        "report_name": "Investor news / exchange filings (BSE/NSE)",
+        "cadence": "Monthly provisional output; quarterly/annual financial results",
+        "primary_source_url": "https://www.nmdc.co.in/investors/investor-news",
+        "primary_source_tier": 1,
+        "reliability": "Medium",
+        "notes": "India's largest iron ore producer and the country's dominant exporter; wholly state-owned. FY2025-26 included commissioning of Deposit 4 at Bailadila. Plotted at Kirandul, the larger of the two Bailadila mining towns (Chhattisgarh); Donimalai (Karnataka, approx. 15.15N 76.35E) is a separate, smaller NMDC complex not yet given its own point here — a genuine gap flagged rather than force-plotted. Reliability marked Medium pending a Bailadila-only production figure: the 53.15 Mt company-wide FY2025-26 total is confirmed but not yet split by mine.",
+        "status": "Output surging, no Bailadila-only split",
+        "status_detail": "NMDC's company-wide provisional production rose 31.4% y/y to 4.06 Mt in July 2026 (cumulative Apr–Jul FY26-27: 19.16 Mt, +27% y/y). Chhattisgarh (Bailadila) state-level output was 2.55 Mt in July 2026 vs 1.89 Mt a year earlier and drove most of the increase, but this is a state-level proxy, not an official Bailadila-only figure — Kirandul, Bacheli and Donimalai remain unsplit. NMDC's Q1 FY26-27 results, due 14 Aug 2026, may add more detail.",
+        "status_updated": "13 Aug 2026",
+        "status_source": {
+          "name": "NMDC — Monthly Business Update, Production & Sales of Iron Ore (Provisional) for and upto July 2026 (Regulation 30 filing)",
+          "url": "https://www.steelorbis.com/steel-news/latest-news/indias-nmdc-limited-sees-31-rise-in-iron-ore-output-in-july-2026-1468456.htm",
+          "published": "01 Aug 2026",
+          "tier": 1,
+          "verification_note": "nmdc.co.in's investor-news page is JS-rendered and returned no content to automated/agent fetch; sourced via trade press (SteelOrbis, corroborated by PSUConnect and Metal.com) directly quoting NMDC's BSE/NSE Regulation 30 filing rather than the raw filing itself."
+        }
       }
     ],
     "sources": [
@@ -329,9 +513,21 @@
     ],
     "scenarios": {
       "bear": {
-        "years": [2025, 2026, 2027],
-        "supply": [1633.9, 1666.6, 1699.9],
-        "demand": [1633.9, 1625.7, 1617.6],
+        "years": [
+          2025,
+          2026,
+          2027
+        ],
+        "supply": [
+          1633.9,
+          1666.6,
+          1699.9
+        ],
+        "demand": [
+          1633.9,
+          1625.7,
+          1617.6
+        ],
         "note": "Internal downside-demand scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the directional premise of rising supply and softening steel demand. Internal extensions: supply grows 2.0% a year (2026: 1,633.9 × 1.020 = 1,666.6 Mt; 2027: 1,666.6 × 1.020 = 1,699.9 Mt), while demand falls 0.5% a year (2026: 1,633.9 × 0.995 = 1,625.7 Mt; 2027: 1,625.7 × 0.995 = 1,617.6 Mt). Rounded to 0.1 Mt.",
         "assumptions": [
           {
@@ -352,9 +548,21 @@
         ]
       },
       "base": {
-        "years": [2025, 2026, 2027],
-        "supply": [1633.9, 1658.4, 1683.3],
-        "demand": [1633.9, 1642.1, 1650.3],
+        "years": [
+          2025,
+          2026,
+          2027
+        ],
+        "supply": [
+          1633.9,
+          1658.4,
+          1683.3
+        ],
+        "demand": [
+          1633.9,
+          1642.1,
+          1650.3
+        ],
         "note": "Internal central scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the directional premise of rising supply and softening steel demand. Internal extensions: supply grows 1.5% a year (2026: 1,633.9 × 1.015 = 1,658.4 Mt; 2027: 1,658.4 × 1.015 = 1,683.3 Mt), while demand grows 0.5% a year (2026: 1,633.9 × 1.005 = 1,642.1 Mt; 2027: 1,642.1 × 1.005 = 1,650.3 Mt). Rounded to 0.1 Mt.",
         "assumptions": [
           {
@@ -375,9 +583,21 @@
         ]
       },
       "bull": {
-        "years": [2025, 2026, 2027],
-        "supply": [1633.9, 1642.1, 1650.3],
-        "demand": [1633.9, 1658.4, 1683.3],
+        "years": [
+          2025,
+          2026,
+          2027
+        ],
+        "supply": [
+          1633.9,
+          1642.1,
+          1650.3
+        ],
+        "demand": [
+          1633.9,
+          1658.4,
+          1683.3
+        ],
         "note": "Internal upside-demand scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the regional premise that India, Southeast Asia and the Middle East offset falling Chinese steel output. Internal extensions: supply grows 0.5% a year (2026: 1,633.9 × 1.005 = 1,642.1 Mt; 2027: 1,642.1 × 1.005 = 1,650.3 Mt), while demand grows 1.5% a year (2026: 1,633.9 × 1.015 = 1,658.4 Mt; 2027: 1,658.4 × 1.015 = 1,683.3 Mt). Rounded to 0.1 Mt.",
         "assumptions": [
           {
@@ -522,6 +742,31 @@
           "name": "ArcelorMittal — SEC EDGAR 6-K filings",
           "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
           "scope": "Liberia (Yekepa/Tokadeh) mining segment, reported quarterly"
+        },
+        {
+          "name": "Anglo American Kumba Iron Ore",
+          "url": "https://www.angloamericankumba.com/media/press-releases",
+          "scope": "Sishen and Kolomela (South Africa) — distinct entity from Anglo American's Minas-Rio"
+        },
+        {
+          "name": "LKAB",
+          "url": "https://lkab.com/en/press/",
+          "scope": "Kiruna, Malmberget and Svappavaara (Sweden) — supplies ~86% of the EU's iron ore"
+        },
+        {
+          "name": "Labrador Iron Ore Royalty Corporation",
+          "url": "https://labradorironore.com/news/",
+          "scope": "Iron Ore Company of Canada (IOC), Labrador City — regulated-filer cross-check alongside Rio Tinto's own releases"
+        },
+        {
+          "name": "Samarco",
+          "url": "https://www.samarco.com/",
+          "scope": "Germano Complex (Brazil), Vale/BHP 50:50 joint venture"
+        },
+        {
+          "name": "NMDC Limited",
+          "url": "https://www.nmdc.co.in/investors/investor-news",
+          "scope": "Bailadila (Kirandul/Bacheli) and Donimalai (India) — state-owned"
         }
       ]
     },

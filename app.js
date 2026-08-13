@@ -158,14 +158,13 @@ function renderMap() {
     lon: referenceMines.map((mine) => mine.lon),
     lat: referenceMines.map((mine) => mine.lat),
     text: referenceMines.map((mine) => mine.name),
-    customdata: referenceMines.map((mine) => mine.country),
+    customdata: referenceMines.map((mine) => [mine.country, mine.status || "Status not yet checked"]),
     marker: {
       color: "rgba(0, 37, 50, 0.28)",
       size: 7,
       line: { color: "rgba(0, 37, 50, 0.48)", width: 0.8 },
     },
-    hovertemplate:
-      "<b>%{text}</b><br>%{customdata}<br>Reference operation · no active disruption assessment<extra></extra>",
+    hovertemplate: "<b>%{text}</b><br>%{customdata[0]} · %{customdata[1]}<extra></extra>",
   };
   const disruptionTrace = {
     type: "scattergeo",
@@ -274,6 +273,29 @@ function directionColor(direction) {
   if (direction === "up") return { line: COLORS.green500, fill: COLORS.green050 };
   if (direction === "down") return { line: COLORS.red500, fill: COLORS.red050 };
   return { line: COLORS.blue500, fill: COLORS.blue050 };
+}
+
+function renderReferenceTable() {
+  const referenceMines = state.data.reference_mines?.items || [];
+  $("#reference-table-body").innerHTML = referenceMines
+    .map((mine) => {
+      const source = mine.status_source;
+      return `
+        <tr>
+          <td>${escapeHtml(mine.name)}</td>
+          <td>${escapeHtml(mine.country)}</td>
+          <td>
+            ${
+              mine.status
+                ? `<span class="reference-status">${escapeHtml(mine.status)}<small>${escapeHtml(mine.status_detail || "")}</small></span>`
+                : "Status not yet checked"
+            }
+          </td>
+          <td>${escapeHtml(mine.status_updated || "—")}</td>
+          <td>${source ? sourceLink(source) : "—"}</td>
+        </tr>`;
+    })
+    .join("");
 }
 
 function renderTightness(data) {
@@ -691,6 +713,7 @@ async function init() {
     renderHeader(state.data);
     renderKpis(state.data.kpis);
     renderMineTable();
+    renderReferenceTable();
     renderTightness(state.data.tightness);
     renderOutlook();
     renderDrivers(state.data.drivers);

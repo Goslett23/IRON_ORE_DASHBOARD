@@ -50,6 +50,41 @@
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
       "note": "Gap identified and fixed: mine #6 (ArcelorMittal Liberia, Yekepa/Tokadeh) was in the original candidate sheet but missing from this registry, so the weekly job was silently never checking it. Verified via the Q1 2026 6-K earnings release exhibit (CIK 1243429): the Mining segment table breaks out iron ore production and shipment volumes quarterly, separating ArcelorMittal Liberia from ArcelorMittal Mines Canada (AMMC) in the same table. This is better disclosure than the original candidate sheet assumed (it flagged 'may only appear in annual report, not quarterly' — that was incorrect). Same regulated-filing-feed pattern as Rio Tinto, most stable source type in the registry.",
       "terms": ["Liberia", "iron ore production", "iron ore shipment", "Mining segment", "AMMC"]
+    },
+    {
+      "id": "anglo-american-kumba-press-releases",
+      "name": "Anglo American Kumba Iron Ore — Press releases index (Sishen + Kolomela)",
+      "url": "https://www.angloamericankumba.com/media/press-releases",
+      "note": "Gap closed August 2026: Kumba (JSE-listed, majority Anglo American-owned) is a distinct operating entity from Anglo American's Minas-Rio (Brazil) and was entirely untracked despite being a top-5 seaborne exporter. Confirmed FY2025 production and sales report + trading statement (5 Feb 2026) reports Sishen and Kolomela together each quarter. Track the index page, not a constructed URL, consistent with Vale/Fortescue/Anglo American Minas-Rio above.",
+      "terms": ["Kumba", "Sishen", "Kolomela", "production and sales report", "Northern Cape"]
+    },
+    {
+      "id": "lkab-press-releases",
+      "name": "LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
+      "url": "https://lkab.com/en/press/",
+      "note": "Gap closed August 2026: LKAB supplies roughly 86% of the EU's iron ore and was entirely untracked — the largest single addition to this registry's geographic coverage. Confirmed via Year-end Report 2025 (2025 deliveries ~26 Mt). State-owned (Sweden), so no minority-share complication, but note the confirmed figure is deliveries, not mine-head production — flagged in reference_mines.items' production_basis field.",
+      "terms": ["LKAB", "Kiruna", "Kiirunavaara", "Malmberget", "iron ore", "delivery volumes", "Iron Ore Line"]
+    },
+    {
+      "id": "labrador-iron-ore-royalty-corp",
+      "name": "Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
+      "url": "https://labradorironore.com/news/",
+      "note": "Gap closed August 2026: Iron Ore Company of Canada (IOC) was already inside the existing Rio Tinto SEC 6-K entry's stated scope (\"Pilbara, IOC and Simandou\") but had no reference_mines.items row and no dedicated registry entry, so the weekly job had nothing IOC-specific to check between Rio Tinto's own quarterly releases. LIORC (TSX-listed, holds 15.1% of IOC) is a regulated filer that reports IOC's quarterly saleable production directly — a genuinely single-asset, mine-level source, unlike Rio Tinto's hub-level Pilbara disclosure.",
+      "terms": ["Iron Ore Company of Canada", "IOC", "Labrador City", "saleable production", "LIORC"]
+    },
+    {
+      "id": "samarco-press-releases",
+      "name": "Samarco — Company site (Germano Complex, Vale/BHP JV)",
+      "url": "https://www.samarco.com/",
+      "note": "Gap closed August 2026: Samarco (Vale 50% / BHP 50%) is restarting post-2015 Fundao dam disaster and is targeting 15 Mt of pellets/fines in 2025, roughly 60% of pre-disaster capacity — material and newsworthy (a combined ~US$28bn Vale/BHP disaster settlement with Brazil was signed in 2025) but was untracked because the source tracker only followed Vale's and BHP's own segment disclosures, which do not always restate the JV's own targets on a fixed schedule. Track Samarco's own site as the primary, with Vale/BHP as corroborating secondary sources.",
+      "terms": ["Samarco", "Germano", "Ubu", "pellet", "Mariana", "Fundao"]
+    },
+    {
+      "id": "nmdc-investor-news",
+      "name": "NMDC Limited — Investor news (Bailadila + Donimalai)",
+      "url": "https://www.nmdc.co.in/investors/investor-news",
+      "note": "Gap closed August 2026: India was entirely absent from this registry despite NMDC being the world's third-largest iron ore exporter by some rankings and a wholly state-owned enterprise with FY2025-26 production of a record 53.15 Mt (+21% y/y). HTML index of investor news / BSE/NSE exchange filings — track the index, not a constructed URL, consistent with the operator-index pattern used elsewhere in this registry. Open item: NMDC does not appear to publish a Bailadila-only (vs. Donimalai) production split in the releases reviewed so far — confirm on next pass.",
+      "terms": ["NMDC", "Bailadila", "Kirandul", "Bacheli", "Donimalai", "iron ore production", "Chhattisgarh"]
     }
   ],
   "market_context": [
