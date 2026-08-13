@@ -94,6 +94,34 @@
       "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
       "note": "No genuine ongoing iron-ore outlook publication exists for Canada comparable to REQ (Australia) or IBRAM (Brazil) — checked bank research (RBC, TD, Deutsche Bank) and found only sporadic, largely paywalled sell-side notes, not a structured free forecast. NRCan is a government body and the best available free source, but this is predominantly historical/statistical (production, trade, exploration spend), with only a thin one-year-ahead forecast component collected as part of its Annual Mineral Production Survey. Flag this gap explicitly rather than overstate what NRCan provides — it is not equivalent in forecasting depth to the Australian or Brazilian sources above.",
       "terms": ["iron ore", "Canada", "production", "exports", "Natural Resources Canada"]
+    },
+    {
+      "id": "mysteel-china-port-inventory",
+      "name": "Mysteel — China iron ore port inventory (weekly)",
+      "url": "https://www.mysteel.net/h/iron-ore/",
+      "note": "Weekly imported iron ore stockpile levels across China's 47 major ports. Headline figures are published free in Mysteel's weekly analysis articles even though their full downloadable dataset is subscription-based. Used as the standard industry proxy for seaborne market tightness, since China accounts for roughly 70%+ of global seaborne iron ore imports.",
+      "terms": ["China", "port inventory", "iron ore stocks", "47 ports", "stockpile"]
+    },
+    {
+      "id": "steelorbis-china-iron-ore-imports",
+      "name": "SteelOrbis — China iron ore imports",
+      "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
+      "note": "Stable iron ore market and news index carrying SteelOrbis's monthly reports on China's iron ore import volumes. SteelOrbis reports figures released by China's General Administration of Customs secondhand, so this is a free industry-news source rather than the primary customs data feed; classify as Tier 2 context only.",
+      "terms": ["China", "iron ore imports", "customs", "GACC", "import volume"]
+    },
+    {
+      "id": "steelorbis-brazil-china-freight",
+      "name": "SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
+      "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
+      "note": "Same stable iron ore market index as the China-imports entry above; also carries SteelOrbis's periodic reports on Capesize freight rates for both the Tubarão-Qingdao (Brazil) and West Australia-Qingdao (the Baltic Exchange's \"C5\" route) benchmark lanes. Tier 2, secondhand reporting of freight-market data (shipbrokers SSY/Braemar are the underlying assessors), not a primary exchange feed.",
+      "terms": ["Tubarao", "Qingdao", "Western Australia", "freight rate", "Capesize", "C5"]
+    },
+    {
+      "id": "indexbox-kallanish-freight-rates",
+      "name": "IndexBox/Kallanish — Iron ore freight rates roundups",
+      "url": "https://www.indexbox.io/blog/",
+      "note": "Periodic roundup articles covering both the Tubarão-Qingdao (Brazil) and West Australia-Qingdao (Australia) Capesize freight rates in the same piece, syndicating Kallanish's freight-market reporting. Free, but secondhand — Tier 2, not a primary shipbroker/exchange feed. Articles are individually dated (e.g. monthly \"freight rates in [month]\" posts), not a single stable page, so a specific new article must be located manually when this index changes rather than assumed from a fixed URL pattern.",
+      "terms": ["Tubarao", "Western Australia", "Qingdao", "Capesize", "freight rate"]
     }
   ],
   "wide_web": {

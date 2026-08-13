@@ -264,10 +264,15 @@ function showMine(id) {
   drawer.hidden = false;
 }
 
-function tightnessTone(metric) {
-  const label = metric.label.toLowerCase();
-  if (label.includes("gap")) return { line: COLORS.red500, fill: COLORS.red050 };
-  if (label.includes("balance")) return { line: COLORS.green500, fill: COLORS.green050 };
+function trendColor(first, last) {
+  if (last > first) return { line: COLORS.green500, fill: COLORS.green050 };
+  if (last < first) return { line: COLORS.red500, fill: COLORS.red050 };
+  return { line: COLORS.blue500, fill: COLORS.blue050 };
+}
+
+function directionColor(direction) {
+  if (direction === "up") return { line: COLORS.green500, fill: COLORS.green050 };
+  if (direction === "down") return { line: COLORS.red500, fill: COLORS.red050 };
   return { line: COLORS.blue500, fill: COLORS.blue050 };
 }
 
@@ -289,34 +294,169 @@ function renderTightness(data) {
 
   if (window.Plotly) {
     data.indicators.forEach((metric, index) => {
-      const tone = tightnessTone(metric);
-      const trace = {
-        type: "scatter",
-        mode: "lines",
-        x: metric.spark.map((_, point) => point),
-        y: metric.spark,
-        line: { color: tone.line, width: 2 },
-        fill: "tozeroy",
-        fillcolor: tone.fill,
-        hovertemplate: "Direction index: %{y}<extra></extra>",
-      };
-      const layout = plotLayout({
-        margin: { l: 2, r: 2, t: 10, b: 2 },
-        xaxis: {
-          visible: false,
-          fixedrange: true,
-        },
-        yaxis: {
-          visible: false,
-          fixedrange: true,
-          rangemode: "tozero",
-        },
-      });
-      window.Plotly.react(`tightness-plot-${index}`, [trace], layout, PLOT_CONFIG);
+      if (metric.timeseries) {
+        renderTimeseriesIndicator(metric, index);
+      } else if (metric.range) {
+        renderRangeIndicator(metric, index);
+      } else if (metric.bar) {
+        renderBarIndicator(metric, index);
+      } else {
+        renderSparkIndicator(metric, index);
+      }
     });
   }
 
   $("#tightness-assessment").innerHTML = `<strong>${escapeHtml(data.rating)}.</strong> ${escapeHtml(data.assessment)}`;
+}
+
+function renderSparkIndicator(metric, index) {
+  const tone = trendColor(metric.spark[0], metric.spark.at(-1));
+  const trace = {
+    type: "scatter",
+    mode: "lines",
+    x: metric.spark.map((_, point) => point),
+    y: metric.spark,
+    line: { color: tone.line, width: 2 },
+    fill: "tozeroy",
+    fillcolor: tone.fill,
+    hovertemplate: "Direction index: %{y}<extra></extra>",
+  };
+  const layout = plotLayout({
+    margin: { l: 2, r: 2, t: 10, b: 2 },
+    xaxis: {
+      visible: false,
+      fixedrange: true,
+    },
+    yaxis: {
+      visible: false,
+      fixedrange: true,
+      rangemode: "tozero",
+    },
+  });
+  window.Plotly.react(`tightness-plot-${index}`, [trace], layout, PLOT_CONFIG);
+}
+
+const ROUTE_DASH_PATTERNS = ["solid", "dot", "dash"];
+
+function renderTimeseriesIndicator(metric, index) {
+  const points = metric.timeseries;
+  const routes = [...new Set(points.map((point) => point.route ?? null))];
+  const multiRoute = routes.length > 1;
+
+  const traces = routes.map((route, routeIndex) => {
+    const routePoints = points.filter((point) => (point.route ?? null) === route);
+    const tone = trendColor(routePoints[0].value, routePoints.at(-1).value);
+    const dash = ROUTE_DASH_PATTERNS[routeIndex % ROUTE_DASH_PATTERNS.length];
+    return {
+      type: "scatter",
+      mode: "lines+markers",
+      name: route ?? metric.label,
+      x: routePoints.map((point) => point.date),
+      y: routePoints.map((point) => point.value),
+      line: { color: tone.line, width: 2, dash },
+      marker: { color: tone.line, size: 4 },
+      fill: multiRoute ? "none" : "tozeroy",
+      fillcolor: tone.fill,
+      hovertemplate: `${route ? escapeHtml(route) + " " : ""}%{x}: $%{y}/t<extra></extra>`,
+    };
+  });
+
+  const layout = plotLayout({
+    margin: { l: 2, r: 2, t: multiRoute ? 20 : 10, b: 2 },
+    showlegend: multiRoute,
+    legend: multiRoute
+      ? { orientation: "h", x: 0, y: 1.28, font: { family: FONT_FAMILY, size: 8, color: COLORS.blue700 } }
+      : undefined,
+    xaxis: {
+      type: "date",
+      visible: false,
+      fixedrange: true,
+    },
+    yaxis: {
+      visible: false,
+      fixedrange: true,
+      rangemode: "tozero",
+    },
+  });
+  window.Plotly.react(`tightness-plot-${index}`, traces, layout, PLOT_CONFIG);
+}
+
+function renderRangeIndicator(metric, index) {
+  const { low, high, current, trend } = metric.range;
+  const pad = (high - low) * 0.12 || 1;
+  const tone = directionColor(trend);
+  const rangeTrace = {
+    type: "bar",
+    orientation: "h",
+    x: [high - low],
+    base: [low],
+    y: [""],
+    width: 0.5,
+    marker: { color: COLORS.blue050 },
+    hoverinfo: "skip",
+  };
+  const currentTrace = {
+    type: "scatter",
+    mode: "markers",
+    x: [current],
+    y: [""],
+    marker: {
+      symbol: "line-ns",
+      size: 30,
+      line: { width: 3, color: tone.line },
+    },
+    hovertemplate: `Current: ${current}<extra></extra>`,
+  };
+  const layout = plotLayout({
+    margin: { l: 2, r: 2, t: 14, b: 16 },
+    xaxis: {
+      range: [low - pad, high + pad],
+      visible: true,
+      fixedrange: true,
+      tickmode: "array",
+      tickvals: [low, high],
+      ticktext: [String(low), String(high)],
+      tickfont: { family: FONT_FAMILY, size: 8, color: COLORS.blue700 },
+      gridcolor: COLORS.blue050,
+      zeroline: false,
+    },
+    yaxis: { visible: false, fixedrange: true, range: [-0.6, 0.6] },
+    barmode: "overlay",
+  });
+  window.Plotly.react(`tightness-plot-${index}`, [rangeTrace, currentTrace], layout, PLOT_CONFIG);
+}
+
+function renderBarIndicator(metric, index) {
+  const { value } = metric.bar;
+  const tone = directionColor(value > 0 ? "up" : value < 0 ? "down" : "flat");
+  const magnitude = Math.abs(value) || 1;
+  const trace = {
+    type: "bar",
+    orientation: "h",
+    x: [value],
+    y: [""],
+    width: 0.5,
+    marker: { color: tone.line },
+    hoverinfo: "skip",
+  };
+  const layout = plotLayout({
+    margin: { l: 2, r: 2, t: 10, b: 16 },
+    xaxis: {
+      range: [-magnitude * 1.4, magnitude * 1.4],
+      visible: true,
+      fixedrange: true,
+      zeroline: true,
+      zerolinecolor: COLORS.blue100,
+      zerolinewidth: 1,
+      tickmode: "array",
+      tickvals: [0, value],
+      ticktext: ["0", `${value > 0 ? "+" : ""}${value}%`],
+      tickfont: { family: FONT_FAMILY, size: 8, color: COLORS.blue700 },
+      showgrid: false,
+    },
+    yaxis: { visible: false, fixedrange: true, range: [-0.6, 0.6] },
+  });
+  window.Plotly.react(`tightness-plot-${index}`, [trace], layout, PLOT_CONFIG);
 }
 
 function renderOutlook() {

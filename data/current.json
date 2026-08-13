@@ -210,13 +210,41 @@
   },
   "tightness": {
     "rating": "LOOSE / EASING",
-    "assessment": "Mine-level and seaborne availability are easing rather than tightening. REQ June 2026 says Australian export volumes rose 6% year on year in the March quarter and forecasts softer iron ore prices as supply rises from Africa, Brazil and Australia while steel demand softens. No sourced port-stockpile level, capacity-utilisation rate, fines spread or pellet premium was available in the five approved sources.",
+    "assessment": "Supply is broadly loose, though individual signals are mixed. REQ forecasts global iron ore supply growth of about 0.3% a year through to 2031, with most of the rise coming from Guinea, Brazil and Australia. This is a worldwide supply forecast across all producing countries, not a sum of or proxy for the dashboard's tracked mines. Mysteel reports 173.26 Mt at China's 47 major ports on 9 July 2026, down 1.36 Mt (0.8%) week on week; this is China-specific port inventory, not a worldwide stock figure, and is used as the standard proxy for seaborne tightness because China accounts for roughly 70%+ of global seaborne iron ore imports. REQ reports Australian export volumes up 6% year on year in the March quarter. World Steel reports global crude steel output of 1,849.4 Mt in 2025, down 2.0% year on year, while REQ's medium-term outlook has world steel production reaching around 2 billion tonnes by 2031.",
     "indicators": [
+      {
+        "label": "Global iron ore mine production growth (all countries)",
+        "value": "+0.3% p.a. forecast to 2031",
+        "signal": "LOOSENING — REQ GLOBAL SUPPLY, NOT TRACKED MINES",
+        "bar": { "value": 0.3 },
+        "source": {
+          "name": "REQ — Resources and Energy Quarterly June 2026",
+          "url": "https://www.industry.gov.au/sites/default/files/2026-07/resources-and-energy-quarterly-june-2026.pdf",
+          "published": "3 Jul 2026",
+          "tier": 1
+        }
+      },
+      {
+        "label": "China iron ore port inventory (47 major ports)",
+        "value": "173.26 Mt (−0.8% w/w)",
+        "signal": "TIGHTENING — CHINA PORT STOCKS, NOT GLOBAL",
+        "timeseries": [
+          { "date": "2026-03-19", "value": 178.1 },
+          { "date": "2026-04-23", "value": 173.36 },
+          { "date": "2026-07-09", "value": 173.26 }
+        ],
+        "source": {
+          "name": "Mysteel — Weekly: China's iron ore port stocks dip for another week",
+          "url": "https://www.mysteel.net/analysis/5131639-weekly-chinas-iron-ore-port-stocks-dip-for-another-week",
+          "published": "9 Jul 2026",
+          "tier": 2
+        }
+      },
       {
         "label": "Australian iron ore export volumes, March quarter 2026",
         "value": "+6% y/y",
         "signal": "LOOSENING",
-        "spark": [],
+        "bar": { "value": 6 },
         "source": {
           "name": "REQ — Resources and Energy Quarterly June 2026",
           "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-june-2026",
@@ -225,15 +253,65 @@
         }
       },
       {
-        "label": "Global iron ore supply outlook",
-        "value": "RISING",
-        "signal": "LOOSENING",
-        "spark": [],
+        "label": "Global crude steel production outlook",
+        "value": "1,849.4 Mt in 2025 (−2.0% y/y)",
+        "signal": "SOFT NEAR TERM / GROWTH TO 2031",
+        "bar": { "value": -2.0 },
         "source": {
-          "name": "REQ — Resources and Energy Quarterly June 2026",
-          "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-june-2026",
-          "published": "3 Jul 2026",
-          "tier": 1
+          "name": "World Steel Association — 2025 global crude steel production totals",
+          "url": "https://worldsteel.org/media/press-releases/2026/december-2025-crude-steel-production-2025-global-crude-steel-production/",
+          "published": "23 Jan 2026",
+          "tier": 2
+        }
+      },
+      {
+        "label": "China iron ore imports (cumulative flow, Jan–Jul 2026)",
+        "value": "736.841 Mt (+5.9% y/y)",
+        "signal": "GROWTH DECELERATING — CHINA IMPORT FLOW, NOT PORT STOCKS. Values shown are the y/y growth rate of cumulative imports at each reporting milestone (not the tonnage itself), which is why the line falls even though import volumes are still rising.",
+        "timeseries": [
+          { "date": "2026-03-31", "value": 10.5 },
+          { "date": "2026-04-30", "value": 8.0 },
+          { "date": "2026-06-30", "value": 6.3 },
+          { "date": "2026-07-31", "value": 5.9 }
+        ],
+        "source": {
+          "name": "SteelOrbis — China's iron ore imports increase by 5.9 percent in January-July 2026",
+          "url": "https://www.steelorbis.com/steel-news/latest-news/chinas-iron-ore-imports-increase-by-59-percent-in-january-july-2026-1469905.htm",
+          "published": "10 Aug 2026",
+          "tier": 2
+        }
+      },
+      {
+        "label": "62% Fe iron ore price (CFR China)",
+        "value": "$95.09/t",
+        "signal": "Down 6.8% over the past year; currently near the bottom of its 52-week range of $93.66–$111.42/t, shown below. Delayed quote as of 12 Aug 2026 via a free aggregator, not a primary exchange feed.",
+        "range": { "low": 93.66, "high": 111.42, "current": 95.09, "trend": "down" },
+        "source": {
+          "name": "SGX Iron Ore 62% Fe futures (via Investing.com)",
+          "url": "https://www.investing.com/commodities/iron-ore-62-cfr-futures",
+          "published": "13 Aug 2026",
+          "tier": 2
+        }
+      },
+      {
+        "label": "Iron ore Capesize freight rates (China-bound)",
+        "value": "Brazil $33.95/t · Australia $10.95/t",
+        "signal": "Two separate lanes, not one blended figure — Australia's route is roughly a third of Brazil's cost, reflecting the much shorter shipping distance to China. Brazil (Tubarão-Qingdao) rose from $21.35/t (19 Dec 2025) to a two-year high near $37/t in mid-May 2026 — partly driven by a Middle East conflict beginning 28 Feb 2026 that lifted fuel costs and shipping uncertainty — before easing to $33.95/t by 12 Jun 2026. Australia (West Australia-Qingdao, the Baltic Exchange's \"C5\" route) rose from $10.78/t (21 Nov 2025) to $15.25/t by 22 May 2026, then fell 24.7% in one week to $10.95/t by 12 Jun 2026 — Australia's route has shown sharper week-on-week swings than Brazil's on these data points.",
+        "timeseries": [
+          { "route": "Brazil (Tubarão-Qingdao)", "date": "2025-12-19", "value": 21.35 },
+          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-03-26", "value": 30.65 },
+          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-04-24", "value": 33 },
+          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-05-22", "value": 36.15 },
+          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-06-12", "value": 33.95 },
+          { "route": "Australia (West Australia-Qingdao)", "date": "2025-11-21", "value": 10.78 },
+          { "route": "Australia (West Australia-Qingdao)", "date": "2026-05-22", "value": 15.25 },
+          { "route": "Australia (West Australia-Qingdao)", "date": "2026-06-12", "value": 10.95 }
+        ],
+        "source": {
+          "name": "IndexBox/Kallanish — Iron Ore Freight Rates Drop in June 2026",
+          "url": "https://www.indexbox.io/blog/iron-ore-freight-rates-decline-in-early-june-2026-amid-capesize-downturn/",
+          "published": "18 Jun 2026",
+          "tier": 2
         }
       }
     ]
@@ -480,6 +558,26 @@
           "name": "Natural Resources Canada — Iron ore facts",
           "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
           "scope": "Historical/statistical only — not a genuine outlook forecast, so not accepted as a scenario-provenance citation. Included for Canada country-level context."
+        },
+        {
+          "name": "Mysteel — China iron ore port inventory (weekly)",
+          "url": "https://www.mysteel.net/h/iron-ore/",
+          "scope": "Weekly imported iron ore stockpiles at China's 47 major ports; China-specific proxy for seaborne market tightness"
+        },
+        {
+          "name": "SteelOrbis — China iron ore imports",
+          "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
+          "scope": "Monthly China iron ore import-flow reports based on GACC data; secondary industry-news source, not the primary customs feed"
+        },
+        {
+          "name": "SteelOrbis — Capesize freight rates (Brazil-China, Australia-China)",
+          "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
+          "scope": "Tubarão-Qingdao and West Australia-Qingdao Capesize freight rates; secondhand reporting of shipbroker assessments, not a primary exchange feed"
+        },
+        {
+          "name": "IndexBox/Kallanish — Iron ore freight rates roundups",
+          "url": "https://www.indexbox.io/blog/",
+          "scope": "Periodic freight-market roundups covering both China-bound Capesize lanes; individually-dated articles, not a single stable page"
         }
       ]
     },
