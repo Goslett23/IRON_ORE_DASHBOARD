@@ -237,6 +237,10 @@ main {
   color: var(--blue-500) !important;
 }
 
+.tone-orange {
+  color: var(--red-300) !important;
+}
+
 .dashboard-section {
   padding: 0 0 8px;
   scroll-margin-top: 46px;

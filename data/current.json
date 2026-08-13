@@ -10,64 +10,105 @@
   "kpis": [
     {
       "label": "Disruption risk",
-      "value": "TODO",
-      "detail": "No disruption entries logged yet — pending analyst review of Tier 1/2 sources",
-      "tone": "blue"
+      "value": "MEDIUM",
+      "detail": "Two medium-risk items (Vale 2026 guidance cut, Fortescue Iron Bridge ramp-up delay); one low-risk cyclone disruption at Rio Tinto now resolved",
+      "tone": "orange"
     },
     {
       "label": "Mine-level supply tightness",
-      "value": "TODO",
-      "detail": "Pending analyst assessment (fines/lump availability, port stockpiles)",
-      "tone": "blue"
+      "value": "LOOSE / EASING",
+      "detail": "REQ June 2026 expects rising supply from Africa, Brazil and Australia while steel demand softens; this is a mine/seaborne assessment, not a concentrate/refined balance.",
+      "tone": "green"
     },
     {
       "label": "2026 mine supply growth",
       "value": "TODO",
-      "detail": "Pending sourced figure — no confirmed REQ/IBRAM/USGS forecast loaded yet",
+      "detail": "REQ June 2026 says global supply is rising but the accessible report summary does not publish a single 2026 global mine-supply growth percentage; left TODO rather than inferred.",
       "tone": "blue"
     },
     {
       "label": "Seaborne market balance",
-      "value": "TODO",
-      "detail": "Pending sourced figure",
-      "tone": "blue"
+      "value": "LOOSENING",
+      "detail": "REQ June 2026 forecasts softer prices as supply rises from Africa, Brazil and Australia and steel demand softens; no sourced Mt surplus is published in the accessible summary.",
+      "tone": "green"
     }
   ],
-  "disruptions": [],
+  "disruptions": [
+    {
+      "id": "vale-carajas-2026-guidance",
+      "rank": 1,
+      "name": "Carajás / S11D + Serra Norte (Northern System)",
+      "country": "Brazil",
+      "operator": "Vale S.A.",
+      "lat": -6.04,
+      "lon": -50.16,
+      "risk": "MEDIUM",
+      "status": "Guidance revised down / mixed performance",
+      "issue": "2026 guidance cut; Serra Norte licensing and rainfall vs S11D strength",
+      "trend": "→",
+      "evidence": "Vale revised 2026 iron ore production guidance down to 335–345 Mt from an earlier 340–360 Mt range. The Northern System's Q1 2026 output at Serra Norte fell 1.2 Mt y/y, reflecting lower run-of-mine availability tied to licensing restrictions and higher rainfall, partly offset by S11D's Q1 2026 record of 19.9 Mt on stronger asset reliability and mobile-equipment utilisation.",
+      "signal": "2026 guidance: 335–345 Mt, down from 340–360 Mt; Q2 2026 output 84 Mt, +1% y/y.",
+      "next_checkpoint": "Track Serra Norte licensing resolution and H2 2026 rainfall impact against maintained guidance.",
+      "source": {
+        "name": "Vale — Production and sales in 1Q26 and 2026",
+        "url": "https://www.vale.com/check-out-the-production-and-sales-in-1q26-and-2026",
+        "published": "16 Apr 2026",
+        "tier": 1
+      }
+    },
+    {
+      "id": "fortescue-iron-bridge",
+      "rank": 2,
+      "name": "Iron Bridge",
+      "country": "Australia",
+      "operator": "Fortescue",
+      "lat": -21.27,
+      "lon": 119.03,
+      "risk": "MEDIUM",
+      "status": "Ramp-up delayed to FY2028 after impairment",
+      "issue": "Processing-plant erosion and pipeline issues slowed commissioning",
+      "trend": "↗",
+      "evidence": "Fortescue flagged a non-cash impairment of approximately US$750m pre-tax (~US$525m after-tax) against Iron Bridge's carrying value in its June 2026 quarterly production report, citing premature erosion in the processing plant (requiring ceramic-liner replacement and a redesigned air-based rock-separation step) and a leaky 240km water pipeline from the Canning Basin. Full nameplate production has been pushed back to FY2028.",
+      "signal": "Iron Bridge concentrate shipments: 2.7 Mt for the June 2026 quarter, 9 Mt for FY26 (+27% y/y); FY26 guidance 11–14 Mt versus a 22 Mtpa nameplate, rising to only 16 Mt by FY2028.",
+      "next_checkpoint": "Track port outload capacity upgrades (flagged as the current binding constraint) and whether the FY2028 nameplate timeline holds.",
+      "source": {
+        "name": "Fortescue — June 2026 Quarterly Production Report",
+        "url": "https://content.fortescue.com/fortescue17114-fortescueeb60-productionbbdb-8be5/media/project/fortescueportal/shared/documents/regulatory/asx-announcements/automated/03116249-june-2026-quarterly-production-report.pdf",
+        "published": "31 Jul 2026",
+        "tier": 1
+      }
+    },
+    {
+      "id": "rio-tinto-pilbara-cyclones",
+      "rank": 3,
+      "name": "Pilbara operations (Hamersley, Hope Downs, Robe River, Yandicoogina)",
+      "country": "Australia",
+      "operator": "Rio Tinto",
+      "lat": -22.7,
+      "lon": 117.79,
+      "risk": "LOW",
+      "status": "Resolved / monitor",
+      "issue": "Cyclone Narelle and Cyclone Mitchell port closures",
+      "trend": "↘",
+      "evidence": "Tropical Cyclone Narelle (Category 4) forced closures across Rio Tinto's four Pilbara port terminals from 24 March 2026. Ship loading resumed at East Intercourse Island, Parker Point and Cape Lambert B by 28 March; Cape Lambert A required further repair. Combined with February's Cyclone Mitchell, the two events are estimated to have impacted iron ore shipments by around 8 million tonnes, with roughly half recoverable.",
+      "signal": "2026 Pilbara shipment guidance maintained at 323–338 Mt despite ~8 Mt of estimated cyclone-related shipment impact.",
+      "next_checkpoint": "Confirm Cape Lambert A repair completion and H1 2026 shipment recovery against the ~4 Mt recoverable estimate.",
+      "source": {
+        "name": "Rio Tinto — Iron Ore update following Tropical Cyclone Narelle",
+        "url": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-provides-iron-ore-update-following-tropical-cyclone-narelle",
+        "published": "29 Mar 2026",
+        "tier": 1
+      }
+    }
+  ],
   "reference_mines": {
-    "note": "Tracked major iron ore operations shown for geographic context. No disruption assessment has been made for any entry below; coordinates are marked TODO where not yet sourced (see TODO.md). China's domestic aggregate is tracked as country-level context via USGS/NBS statistics only and is deliberately not listed here or plotted, since it has no single representative mine location.",
+    "note": "Tracked major iron ore operations shown for geographic context; entries here have no active disruption assessment. Vale's Carajás/Northern System and Rio Tinto's Pilbara operations moved to the Mine Disruption Tracker (see disruptions above) and are intentionally not duplicated here. Coordinates are representative hub/district-level points (public geographic facts, not sourced from a market/financial source) — several of these are multi-pit hubs, not a single mine, so treat precision as approximate. China's domestic aggregate is tracked as country-level context via USGS/NBS statistics only and is deliberately not listed here or plotted, since it has no single representative mine location.",
     "items": [
-      {
-        "name": "Carajás / S11D + Serra Norte (Northern System)",
-        "country": "Brazil",
-        "operator": "Vale S.A.",
-        "reporting_level": "System-level (Northern System reported as one block; S11D sometimes broken out)",
-        "production_2025_est_mt": 190,
-        "production_basis": "TODO — attributable share not yet confirmed; figure is the hub/system-level estimate from the source tracker, not adjusted to Vale's equity interest",
-        "report_name": "Production and Sales Report (quarterly)",
-        "cadence": "Quarterly",
-        "primary_source_url": "https://vale.com/investors",
-        "primary_source_tier": 1,
-        "reliability": "High",
-        "notes": "Confirmed via Q1/Q2 2026 reports. Mine-level = system-level, not single-pit."
-      },
-      {
-        "name": "Pilbara operations (Hamersley, Hope Downs, Robe River, Yandicoogina)",
-        "country": "Australia",
-        "operator": "Rio Tinto",
-        "reporting_level": "Sub-hub level (Hamersley mines, Hope Downs, Robe River, IOC, Simandou reported separately in tables)",
-        "production_2025_est_mt": 330,
-        "production_basis": "TODO — attributable share not yet confirmed per sub-hub (e.g. Hope Downs is a 50% joint venture); figure is the consolidated estimate from the source tracker",
-        "report_name": "Quarterly Operations Review + 6-K filing",
-        "cadence": "Quarterly",
-        "primary_source_url": "https://www.riotinto.com/en/news",
-        "primary_source_tier": 1,
-        "reliability": "High",
-        "notes": "Confirmed — best mine-level granularity of the majors (see Q1 2026 Annex table)."
-      },
       {
         "name": "Western Australia Iron Ore (WAIO)",
         "country": "Australia",
+        "lat": -23.35,
+        "lon": 119.75,
         "operator": "BHP",
         "reporting_level": "Consolidated WAIO total; individual mines (Newman, Yandi, Mining Area C, Jimblebar) not always broken out weekly",
         "production_2025_est_mt": 290,
@@ -82,6 +123,8 @@
       {
         "name": "Pilbara operations (Chichester + Solomon hubs)",
         "country": "Australia",
+        "lat": -22.4,
+        "lon": 119.5,
         "operator": "Fortescue",
         "reporting_level": "Hub-level (Chichester, Solomon); Iron Bridge magnetite reported separately",
         "production_2025_est_mt": 190,
@@ -96,6 +139,8 @@
       {
         "name": "Minas-Rio",
         "country": "Brazil",
+        "lat": -19.03,
+        "lon": -43.4,
         "operator": "Anglo American",
         "reporting_level": "Single-asset — one of the few true single-mine disclosures available",
         "production_2025_est_mt": 24,
@@ -110,6 +155,8 @@
       {
         "name": "Liberia operations (Yekepa / Tokadeh)",
         "country": "Liberia",
+        "lat": 7.53,
+        "lon": -8.53,
         "operator": "ArcelorMittal Liberia",
         "reporting_level": "Country-level within ArcelorMittal's global mining segment disclosure",
         "production_2025_est_mt": 6,
@@ -124,6 +171,8 @@
       {
         "name": "Bloom Lake",
         "country": "Canada",
+        "lat": 52.79,
+        "lon": -67.08,
         "operator": "Champion Iron",
         "reporting_level": "Single-asset (small producer, but full transparency as sole material asset)",
         "production_2025_est_mt": 15,
@@ -138,6 +187,8 @@
       {
         "name": "Simandou (SimFer / Winning Consortium blocks)",
         "country": "Guinea",
+        "lat": 8.5,
+        "lon": -8.9,
         "operator": "Rio Tinto / Chinalco JV + WCS",
         "reporting_level": "New asset, ramping up in 2026; disclosure currently folded into Rio Tinto's Pilbara release",
         "production_2025_est_mt": 5,
@@ -158,9 +209,34 @@
     ]
   },
   "tightness": {
-    "rating": "TODO — pending analyst assessment",
-    "assessment": "TODO — no automation run yet. Note for the analyst: iron ore has no smelting/refining stage analogous to copper's mine-to-refined chain, so copper's \"concentrate vs refined\" framing does not transfer directly. Consider reframing this section around mine-level supply vs seaborne/port availability (fines vs pellet premium, port stockpiles) rather than reusing copper's language as-is.",
-    "indicators": []
+    "rating": "LOOSE / EASING",
+    "assessment": "Mine-level and seaborne availability are easing rather than tightening. REQ June 2026 says Australian export volumes rose 6% year on year in the March quarter and forecasts softer iron ore prices as supply rises from Africa, Brazil and Australia while steel demand softens. No sourced port-stockpile level, capacity-utilisation rate, fines spread or pellet premium was available in the five approved sources.",
+    "indicators": [
+      {
+        "label": "Australian iron ore export volumes, March quarter 2026",
+        "value": "+6% y/y",
+        "signal": "LOOSENING",
+        "spark": [],
+        "source": {
+          "name": "REQ — Resources and Energy Quarterly June 2026",
+          "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-june-2026",
+          "published": "3 Jul 2026",
+          "tier": 1
+        }
+      },
+      {
+        "label": "Global iron ore supply outlook",
+        "value": "RISING",
+        "signal": "LOOSENING",
+        "spark": [],
+        "source": {
+          "name": "REQ — Resources and Energy Quarterly June 2026",
+          "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-june-2026",
+          "published": "3 Jul 2026",
+          "tier": 1
+        }
+      }
+    ]
   },
   "outlook": {
     "sources": [
@@ -175,85 +251,154 @@
     ],
     "scenarios": {
       "bear": {
-        "years": [],
-        "supply": [],
-        "demand": [],
-        "note": "TODO — populate years/supply/demand once sourced. Cite \"REQ\", \"IBRAM\", or \"internal\" per validate_data.py's provenance check. No REQ/IBRAM equivalent confirmed for Canada — use \"internal\" for Canada-specific assumptions (e.g. Bloom Lake) until a real source is found.",
-        "assumptions": []
+        "years": [2025, 2026, 2027],
+        "supply": [1633.9, 1666.6, 1699.9],
+        "demand": [1633.9, 1625.7, 1617.6],
+        "note": "Internal downside-demand scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the directional premise of rising supply and softening steel demand. Internal extensions: supply grows 2.0% a year (2026: 1,633.9 × 1.020 = 1,666.6 Mt; 2027: 1,666.6 × 1.020 = 1,699.9 Mt), while demand falls 0.5% a year (2026: 1,633.9 × 0.995 = 1,625.7 Mt; 2027: 1,625.7 × 0.995 = 1,617.6 Mt). Rounded to 0.1 Mt.",
+        "assumptions": [
+          {
+            "label": "Published seaborne anchor",
+            "detail": "World Steel in Figures 2026 reports 2025 extra-regional iron ore trade of 1,633.9 Mt.",
+            "value": "1,633.9 Mt (2025)"
+          },
+          {
+            "label": "Internal supply growth",
+            "detail": "A faster Simandou/Brazil/Australia supply case, directionally consistent with REQ June 2026.",
+            "value": "+2.0% p.a."
+          },
+          {
+            "label": "Internal demand growth",
+            "detail": "A downside steel-demand case extending REQ's soft-demand direction.",
+            "value": "−0.5% p.a."
+          }
+        ]
       },
       "base": {
-        "years": [],
-        "supply": [],
-        "demand": [],
-        "note": "TODO — populate years/supply/demand once sourced. Cite \"REQ\", \"IBRAM\", or \"internal\" per validate_data.py's provenance check. No REQ/IBRAM equivalent confirmed for Canada — use \"internal\" for Canada-specific assumptions (e.g. Bloom Lake) until a real source is found.",
-        "assumptions": []
+        "years": [2025, 2026, 2027],
+        "supply": [1633.9, 1658.4, 1683.3],
+        "demand": [1633.9, 1642.1, 1650.3],
+        "note": "Internal central scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the directional premise of rising supply and softening steel demand. Internal extensions: supply grows 1.5% a year (2026: 1,633.9 × 1.015 = 1,658.4 Mt; 2027: 1,658.4 × 1.015 = 1,683.3 Mt), while demand grows 0.5% a year (2026: 1,633.9 × 1.005 = 1,642.1 Mt; 2027: 1,642.1 × 1.005 = 1,650.3 Mt). Rounded to 0.1 Mt.",
+        "assumptions": [
+          {
+            "label": "Published seaborne anchor",
+            "detail": "World Steel in Figures 2026 reports 2025 extra-regional iron ore trade of 1,633.9 Mt.",
+            "value": "1,633.9 Mt (2025)"
+          },
+          {
+            "label": "Internal supply growth",
+            "detail": "A moderate supply-growth case reflecting REQ's Africa, Brazil and Australia outlook.",
+            "value": "+1.5% p.a."
+          },
+          {
+            "label": "Internal demand growth",
+            "detail": "Modest growth as ex-China steel output offsets weaker Chinese output.",
+            "value": "+0.5% p.a."
+          }
+        ]
       },
       "bull": {
-        "years": [],
-        "supply": [],
-        "demand": [],
-        "note": "TODO — populate years/supply/demand once sourced. Cite \"REQ\", \"IBRAM\", or \"internal\" per validate_data.py's provenance check. No REQ/IBRAM equivalent confirmed for Canada — use \"internal\" for Canada-specific assumptions (e.g. Bloom Lake) until a real source is found.",
-        "assumptions": []
+        "years": [2025, 2026, 2027],
+        "supply": [1633.9, 1642.1, 1650.3],
+        "demand": [1633.9, 1658.4, 1683.3],
+        "note": "Internal upside-demand scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the regional premise that India, Southeast Asia and the Middle East offset falling Chinese steel output. Internal extensions: supply grows 0.5% a year (2026: 1,633.9 × 1.005 = 1,642.1 Mt; 2027: 1,642.1 × 1.005 = 1,650.3 Mt), while demand grows 1.5% a year (2026: 1,633.9 × 1.015 = 1,658.4 Mt; 2027: 1,658.4 × 1.015 = 1,683.3 Mt). Rounded to 0.1 Mt.",
+        "assumptions": [
+          {
+            "label": "Published seaborne anchor",
+            "detail": "World Steel in Figures 2026 reports 2025 extra-regional iron ore trade of 1,633.9 Mt.",
+            "value": "1,633.9 Mt (2025)"
+          },
+          {
+            "label": "Internal supply growth",
+            "detail": "A slower ramp-up case for new seaborne tonnes.",
+            "value": "+0.5% p.a."
+          },
+          {
+            "label": "Internal demand growth",
+            "detail": "A stronger ex-China steel-output case based on the regional growth channels identified by REQ.",
+            "value": "+1.5% p.a."
+          }
+        ]
       }
     }
   },
   "drivers": {
-    "rating": "TODO — pending analyst assessment",
-    "assessment": "TODO — structural steel-demand narrative pending analyst input (grid, construction, auto and green-steel/EAF framing, mirroring copper's driver methodology).",
+    "rating": "MIXED / SOFT NEAR TERM",
+    "assessment": "USGS states that almost 98% of iron ore is used in steelmaking. World Steel's 2023 end-use split shows buildings and infrastructure at 52% of finished-steel use. REQ June 2026 expects falling Chinese steel output to be offset by India, Southeast Asia and the Middle East, with world steel production reaching around 2 billion tonnes by 2031; the regional rotation supports volume, while rising EAF use changes ore intensity and grade requirements.",
     "end_use": [
       {
         "name": "Construction & infrastructure",
-        "detail": "TODO — share pending World Steel Association sourcing"
+        "share": 52,
+        "detail": "World Steel Association 2023 steel-use share: buildings and infrastructure 52%."
       },
       {
         "name": "Automotive & transport",
-        "detail": "TODO — share pending World Steel Association sourcing"
+        "share": 17,
+        "detail": "World Steel Association 2023: automotive 12% plus other transport 5%; combined without changing either published share."
       },
       {
         "name": "Machinery & industrial equipment",
-        "detail": "TODO — share pending World Steel Association sourcing"
+        "share": 16,
+        "detail": "World Steel Association 2023 steel-use share: mechanical equipment 16%."
       },
       {
         "name": "Appliances & other manufacturing",
-        "detail": "TODO — share pending World Steel Association sourcing"
+        "share": 15,
+        "detail": "World Steel Association 2023: metal products 10%, electrical equipment 3%, and domestic appliances 2%; combined without changing the published shares."
       }
     ],
     "end_use_source": {
       "name": "World Steel Association — Steel statistics",
       "url": "https://worldsteel.org/data/",
-      "note": "TODO — URL is confirmed real (source_registry.json); the actual end-use percentage split has not been pulled yet, so no shares are populated below."
+      "note": "World Steel in Figures 2024, steel use by sector (2023; 1,763 Mt). Its seven published categories are transparently grouped into the dashboard's four-category taxonomy."
     },
     "items": [
       {
         "name": "China property & construction cycle",
         "type": "Cyclical",
-        "horizon": "TODO",
-        "direction": "TODO",
-        "momentum": "TODO"
+        "horizon": "2026–2031",
+        "direction": "Negative",
+        "momentum": "Weakening",
+        "evidence": 4
       },
       {
         "name": "Global crude steel production",
         "type": "Cyclical",
-        "horizon": "TODO",
-        "direction": "TODO",
-        "momentum": "TODO"
+        "horizon": "2026–2031",
+        "direction": "Positive ex-China",
+        "momentum": "Gradual",
+        "evidence": 5
       },
       {
         "name": "Green steel / EAF transition",
         "type": "Structural",
-        "horizon": "TODO",
-        "direction": "TODO",
-        "momentum": "TODO"
+        "horizon": "Long term",
+        "direction": "Negative for ore intensity; positive for high-grade feed",
+        "momentum": "Gradual",
+        "evidence": 3
       },
       {
         "name": "Infrastructure & grid build-out",
         "type": "Structural",
-        "horizon": "TODO",
-        "direction": "TODO",
-        "momentum": "TODO"
+        "horizon": "2026–2031",
+        "direction": "Positive",
+        "momentum": "Steady",
+        "evidence": 4
       }
     ],
-    "sources": []
+    "sources": [
+      {
+        "name": "World Steel Association — World Steel in Figures 2024",
+        "url": "https://worldsteel.org/wp-content/uploads/World-Steel-in-Figures-2024.pdf"
+      },
+      {
+        "name": "REQ — Resources and Energy Quarterly June 2026",
+        "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-june-2026"
+      },
+      {
+        "name": "USGS — Iron Ore Statistics and Information",
+        "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information"
+      }
+    ]
   },
   "source_register": [
     {

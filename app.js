@@ -139,7 +139,7 @@ function renderKpis(kpis) {
       (item) => `
         <div class="kpi">
           <label>${escapeHtml(item.label)}</label>
-          <strong class="tone-${item.tone === "red" || item.value === "TIGHT" ? "red" : item.tone === "green" ? "green" : "blue"}">${escapeHtml(item.value)}</strong>
+          <strong class="tone-${item.tone === "red" || item.value === "TIGHT" ? "red" : item.tone === "green" ? "green" : item.tone === "orange" ? "orange" : "blue"}">${escapeHtml(item.value)}</strong>
           <small>${escapeHtml(item.detail)}</small>
         </div>`,
     )
