@@ -280,19 +280,27 @@ function renderReferenceTable() {
   $("#reference-table-body").innerHTML = referenceMines
     .map((mine) => {
       const source = mine.status_source;
+      if (!mine.status) {
+        return `
+          <tr>
+            <td>${escapeHtml(mine.name)}</td>
+            <td>${escapeHtml(mine.country)}</td>
+            <td>Status not yet checked</td>
+          </tr>`;
+      }
       return `
         <tr>
           <td>${escapeHtml(mine.name)}</td>
           <td>${escapeHtml(mine.country)}</td>
           <td>
-            ${
-              mine.status
-                ? `<span class="reference-status">${escapeHtml(mine.status)}<small>${escapeHtml(mine.status_detail || "")}</small></span>`
-                : "Status not yet checked"
-            }
+            <details class="reference-status-details">
+              <summary>${escapeHtml(mine.status)}</summary>
+              <div>
+                <p>${escapeHtml(mine.status_detail || "")}</p>
+                <p class="reference-meta">Updated ${escapeHtml(mine.status_updated || "—")}${source ? ` · ${sourceLink(source)}` : ""}</p>
+              </div>
+            </details>
           </td>
-          <td>${escapeHtml(mine.status_updated || "—")}</td>
-          <td>${source ? sourceLink(source) : "—"}</td>
         </tr>`;
     })
     .join("");
