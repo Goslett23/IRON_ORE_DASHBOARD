@@ -102,7 +102,7 @@
     }
   ],
   "reference_mines": {
-    "note": "Tracked major iron ore operations shown for geographic context; entries here have no active disruption assessment. Vale's Carajás/Northern System and Rio Tinto's Pilbara operations moved to the Mine Disruption Tracker (see disruptions above) and are intentionally not duplicated here. Coordinates are representative hub/district-level points (public geographic facts, not sourced from a market/financial source) — several of these are multi-pit hubs, not a single mine, so treat precision as approximate. China's domestic aggregate is tracked as country-level context via USGS/NBS statistics only and is deliberately not listed here or plotted, since it has no single representative mine location.",
+    "note": "Tracked major iron ore operations shown for geographic context; entries here have no active disruption assessment. Vale's Carajás/Northern System and Rio Tinto's Pilbara operations moved to the Mine Disruption Tracker (see disruptions above) and are intentionally not duplicated here. Coordinates are representative hub/district-level points (public geographic facts, not sourced from a market/financial source) — several of these are multi-pit hubs, not a single mine, so treat precision as approximate. China's domestic aggregate is tracked as country-level context via USGS/NBS statistics only and is deliberately not listed here or plotted, since it has no single representative mine location. Expanded from 6 to 11 entries in August 2026 to close real coverage gaps: Kumba (South Africa), LKAB (Sweden), IOC (Canada) and Samarco (Brazil) were previously untracked major producers; NMDC (India) is a wholly new addition covering a market not previously represented on this dashboard at all. See TODO.md for the sourcing caveats on each new row and for gaps still outstanding (NMDC's Donimalai mine, and Ukraine's war-affected iron ore sector, which was investigated but not added — see TODO.md for why).",
     "items": [
       {
         "name": "Western Australia Iron Ore (WAIO)",
@@ -199,6 +199,86 @@
         "primary_source_tier": 1,
         "reliability": "Medium",
         "notes": "Currently low volume but scheduled to scale rapidly — worth tracking as a distinct emerging line."
+      },
+      {
+        "name": "Kumba Iron Ore (Sishen + Kolomela)",
+        "country": "South Africa",
+        "lat": -27.74,
+        "lon": 22.99,
+        "operator": "Anglo American, via JSE-listed, majority-owned Kumba Iron Ore Limited",
+        "reporting_level": "Hub-level; Sishen and Kolomela are run as an integrated pair and reported together each quarter",
+        "production_2025_est_mt": 36.1,
+        "production_basis": "TODO — attributable share not yet confirmed; figure is Kumba's own consolidated FY2025 total (100%-basis, not yet split to Anglo American's attributable share)",
+        "report_name": "Production and Sales Report (quarterly) + FY trading statement",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://www.angloamericankumba.com/media/press-releases",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "FY2025 production of 36.1 Mt (+1% y/y) per Kumba's Q4/FY2025 production and sales report and trading statement (5 Feb 2026), covering the two integrated Northern Cape mines Sishen (near Kathu) and Kolomela (near Postmasburg, ~65km south). Plotted at Sishen's coordinates as the larger of the pair, consistent with how WAIO and the Fortescue Pilbara hub are single-pinned here. A distinct operating entity from Anglo American's Minas-Rio (Brazil), already tracked separately above — this was a real registry gap, not a duplicate."
+      },
+      {
+        "name": "LKAB Swedish operations (Kiruna + Malmberget/Svappavaara)",
+        "country": "Sweden",
+        "lat": 67.84,
+        "lon": 20.19,
+        "operator": "LKAB (wholly Swedish state-owned)",
+        "reporting_level": "Company-wide delivery total; Kiruna (Kiirunavaara), Malmberget and Svappavaara are not separately broken out in the year-end summary used here",
+        "production_2025_est_mt": 26,
+        "production_basis": "TODO — this is 2025 deliveries of iron ore products, not confirmed mine-head production, and is company-wide rather than mine-by-mine; no minority share to net out since LKAB is 100% state-owned, but the production-vs-delivered-tonnage basis still needs reconciling against how other rows in this table define their figure",
+        "report_name": "Year-end Report / Interim Report",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://lkab.com/en/press/",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "~26 Mt of iron ore products delivered in 2025 per LKAB's Year-end Report 2025, recovering from a prior year hit by production stoppages and disruption on the Iron Ore Line (the Kiruna–Narvik/Luleå rail corridor — itself worth tracking as a chokepoint). LKAB supplies roughly 86% of the EU's iron ore, making this the most structurally important European supply line not previously tracked here. Plotted at Kiruna (Kiirunavaara), the flagship mine and the world's largest underground iron ore mine; Malmberget (near Gällivare) is a second major LKAB pit not separately pinned."
+      },
+      {
+        "name": "Iron Ore Company of Canada (IOC)",
+        "country": "Canada",
+        "lat": 52.95,
+        "lon": -66.91,
+        "operator": "Rio Tinto (58.7%) / Mitsubishi Corporation (26.2%) / Labrador Iron Ore Royalty Corporation (15.1%)",
+        "reporting_level": "Single-asset — mine, concentrator and pellet plant at Labrador City, linked by a 418km rail line to the port at Sept-Îles, Quebec",
+        "production_2025_est_mt": 16.5,
+        "production_basis": "TODO — figure is the lower end of FY2025 full-year saleable-production guidance (16.5-19.4 Mt range, expected at the lower end per Q3 2025 reporting), not yet a confirmed actual; not yet split to Rio Tinto's 58.7% attributable share",
+        "report_name": "Quarterly production report (via Rio Tinto) / Labrador Iron Ore Royalty Corporation news releases",
+        "cadence": "Quarterly",
+        "primary_source_url": "https://labradorironore.com/news/",
+        "primary_source_tier": 1,
+        "reliability": "High",
+        "notes": "Genuinely single-asset, unlike Rio Tinto's hub-level Pilbara disclosure — a useful mine-level cross-check. Labrador Iron Ore Royalty Corporation (TSX-listed, holds the 15.1% interest) publishes IOC's quarterly saleable-production figures as a regulated filer; IOC was already within the existing Rio Tinto SEC 6-K registry entry's stated scope, but this reference_mines row was previously missing entirely. Annual capacity is 23 Mt of concentrate, of which 12.5 Mt can be pelletised."
+      },
+      {
+        "name": "Samarco (Germano Complex)",
+        "country": "Brazil",
+        "lat": -20.2,
+        "lon": -43.51,
+        "operator": "Samarco Mineração (Vale 50% / BHP 50% joint venture)",
+        "reporting_level": "Single-asset JV, reported directly by Samarco and referenced in both Vale's and BHP's own segment disclosures",
+        "production_2025_est_mt": 15,
+        "production_basis": "TODO — attributable share not yet confirmed; figure is Samarco's own 2025 target (pellets + fines combined) at the JV level, before any 50/50 split to Vale or BHP",
+        "report_name": "Company press releases (Samarco); cross-referenced in Vale and BHP production reports",
+        "cadence": "Quarterly (Vale/BHP) / as-published (Samarco)",
+        "primary_source_url": "https://www.samarco.com/",
+        "primary_source_tier": 1,
+        "reliability": "Medium",
+        "notes": "Restarted in 2020 after the 2015 Fundao tailings dam disaster; targeting 15 Mt of pellets and fines in 2025 (roughly 60% of pre-disaster capacity) after doubling installed capacity in December 2024, with full capacity targeted by 2028 behind a >US$1bn investment. Vale and BHP signed a combined R$170bn (~US$28bn) disaster settlement with Brazil in 2025 — material enough to belong on this dashboard even before full-capacity restart. Germano is the mining/concentration complex near Mariana, Minas Gerais (pelletising happens separately at the Ubu plant in Anchieta, Espirito Santo); plotted at Germano to match this table's mine-site convention. Reliability marked Medium pending confirmation of Samarco's own publication cadence, since Vale and BHP corroborate the target without restating it on a fixed schedule."
+      },
+      {
+        "name": "NMDC - Bailadila Complex (Kirandul/Bacheli)",
+        "country": "India",
+        "lat": 18.63,
+        "lon": 81.26,
+        "operator": "NMDC Limited (Government of India enterprise)",
+        "reporting_level": "State-level complex; Bailadila's Kirandul and Bacheli deposits are reported together, separate from NMDC's smaller Donimalai mine in Karnataka (not separately plotted here)",
+        "production_2025_est_mt": "TODO — complex-level split not yet confirmed; NMDC's company-wide FY2025-26 total across Bailadila and Donimalai was a record 53.15 Mt (+21% y/y), with Kirandul, Bacheli and Donimalai each posting best-ever output",
+        "production_basis": "TODO — attributable share not applicable (100% government-owned); production-vs-sales basis not yet confirmed",
+        "report_name": "Investor news / exchange filings (BSE/NSE)",
+        "cadence": "Monthly provisional output; quarterly/annual financial results",
+        "primary_source_url": "https://www.nmdc.co.in/investors/investor-news",
+        "primary_source_tier": 1,
+        "reliability": "Medium",
+        "notes": "India's largest iron ore producer and the country's dominant exporter; wholly state-owned. FY2025-26 included commissioning of Deposit 4 at Bailadila. Plotted at Kirandul, the larger of the two Bailadila mining towns (Chhattisgarh); Donimalai (Karnataka, approx. 15.15N 76.35E) is a separate, smaller NMDC complex not yet given its own point here — a genuine gap flagged rather than force-plotted. Reliability marked Medium pending a Bailadila-only production figure: the 53.15 Mt company-wide FY2025-26 total is confirmed but not yet split by mine."
       }
     ],
     "sources": [
@@ -444,6 +524,31 @@
           "name": "ArcelorMittal — SEC EDGAR 6-K filings",
           "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
           "scope": "Liberia (Yekepa/Tokadeh) mining segment, reported quarterly"
+        },
+        {
+          "name": "Anglo American Kumba Iron Ore",
+          "url": "https://www.angloamericankumba.com/media/press-releases",
+          "scope": "Sishen and Kolomela (South Africa) — distinct entity from Anglo American's Minas-Rio"
+        },
+        {
+          "name": "LKAB",
+          "url": "https://lkab.com/en/press/",
+          "scope": "Kiruna, Malmberget and Svappavaara (Sweden) — supplies ~86% of the EU's iron ore"
+        },
+        {
+          "name": "Labrador Iron Ore Royalty Corporation",
+          "url": "https://labradorironore.com/news/",
+          "scope": "Iron Ore Company of Canada (IOC), Labrador City — regulated-filer cross-check alongside Rio Tinto's own releases"
+        },
+        {
+          "name": "Samarco",
+          "url": "https://www.samarco.com/",
+          "scope": "Germano Complex (Brazil), Vale/BHP 50:50 joint venture"
+        },
+        {
+          "name": "NMDC Limited",
+          "url": "https://www.nmdc.co.in/investors/investor-news",
+          "scope": "Bailadila (Kirandul/Bacheli) and Donimalai (India) — state-owned"
         }
       ]
     },

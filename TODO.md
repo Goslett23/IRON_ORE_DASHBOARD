@@ -1,3 +1,64 @@
+## August 2026: expanded reference-mine coverage (5 new operators added)
+
+`reference_mines.items` covered only 6 mines/hubs, all sourced from the original xlsx candidate
+list, and left real gaps: Kumba (South Africa), LKAB (Sweden), Iron Ore Company of Canada, and
+Samarco (Brazil) were all significant producers with no tracking, and India — a top-tier global
+producer/exporter via NMDC — was absent from the registry entirely. Five new rows were added to
+`reference_mines.items`, each backed by an operator or regulated-filer primary source, with a
+matching entry added to `automation/source_registry.json`'s `primary` list and to
+`source_register` in `current.json` so the weekly job actually checks them going forward:
+
+- **Kumba Iron Ore (Sishen + Kolomela), South Africa.** FY2025 production 36.1 Mt (+1% y/y), via
+  Kumba's own Q4/FY2025 production and sales report and trading statement. Kumba is a distinct
+  JSE-listed, majority Anglo American-owned entity from Anglo American's Minas-Rio (Brazil) —
+  confirm this wasn't an oversight elsewhere before assuming "Anglo American" coverage was
+  complete.
+- **LKAB (Kiruna + Malmberget/Svappavaara), Sweden.** ~26 Mt of iron ore products delivered in
+  2025 per LKAB's Year-end Report 2025. LKAB supplies roughly 86% of the EU's iron ore — the
+  single largest gap closed in this pass. Note the confirmed figure is *deliveries*, not
+  mine-head production; needs reconciling against how other rows define their figure.
+- **Iron Ore Company of Canada (IOC), Labrador City.** Was already inside the existing Rio Tinto
+  SEC 6-K registry entry's stated scope ("Pilbara, IOC and Simandou") but had no
+  `reference_mines.items` row of its own — a genuine gap between what the registry claimed to
+  track and what was actually in the published dataset. Figure used (16.5 Mt) is the *lower end
+  of FY2025 guidance*, not a confirmed actual.
+- **Samarco (Germano Complex), Brazil.** Vale/BHP 50:50 joint venture restarting post-2015
+  Fundão dam disaster; targeting 15 Mt of pellets/fines in 2025 (~60% of pre-disaster capacity).
+  Material given the ~US$28bn combined Vale/BHP disaster settlement with Brazil signed in 2025.
+  Reliability marked Medium — Vale/BHP corroborate Samarco's own target but don't always restate
+  it on a fixed schedule; needs a confirmed direct publication cadence from Samarco itself.
+- **NMDC — Bailadila Complex (Kirandul/Bacheli), India.** India was completely absent from this
+  dashboard despite NMDC's FY2025-26 record production of 53.15 Mt (+21% y/y, state-owned).
+  `production_2025_est_mt` is left as a `"TODO"` string rather than a number: NMDC's own
+  releases give a company-wide total across Bailadila and its separate Donimalai (Karnataka)
+  mine, and a Bailadila-only split was not found in this pass — do not silently split the
+  53.15 Mt total or invent a per-site number.
+
+### Still not added — investigated and deliberately left out
+
+- **Ukraine (ArcelorMittal Kryvyi Rih / Metinvest).** Real and currently newsworthy: AMKR was
+  reported operating at roughly 75% of pre-war capacity (~7.5 Mt/year concentrate) with
+  recurring shutdowns from both power-grid attacks and, as of May 2026, a logistics dispute with
+  Ukrzaliznytsia (national rail) that halted mining entirely for a period. **Not added** to
+  either `disruptions` or `reference_mines.items` in this pass because every source found
+  (SteelOrbis, Interfax-Ukraine, GMK Center) is Tier 3 news reporting — no ArcelorMittal IR
+  release, SEC 6-K exhibit, or Metinvest primary disclosure confirming current output was
+  located. Per this dashboard's own methodology, Tier 3 items are for flagging candidates
+  pending primary confirmation, not for publishing as a confirmed disruption or reference row.
+  Metinvest itself (privately held, Rinat Akhmetov/SCM) does not file with the SEC and has no
+  confirmed public production-disclosure cadence — worth checking whether it publishes its own
+  operational updates before the next pass. If a Tier 1/2 source is found, this is a strong
+  candidate for `disruptions` (not `reference_mines`), given the active, evolving nature of the
+  situation.
+- **NMDC — Donimalai, India.** NMDC's second complex (Karnataka). Not given its own
+  `reference_mines.items` row in this pass — see the Bailadila entry above.
+- Other mines identified but not researched in this pass, for a future analyst to assess:
+  Assmang (Khumani/Beeshoek, South Africa — Assore/African Rainbow Minerals JV), Sino Iron and
+  Karara (Australian magnetite, both China-linked JVs), SNIM (Mauritania), Shougang Hierro Perú
+  (Marcona, Peru), and the US Mesabi Range (Minnesota — Cleveland-Cliffs/US Steel). None of
+  these were checked for a confirmed Tier 1/2 source or coordinates — do not assume they were
+  vetted and rejected; they simply weren't reached.
+
 # Outstanding items before this dashboard can publish
 
 This scaffold was built from `iron_ore_source_tracker.xlsx` (Mine candidates + Source order &
