@@ -21,10 +21,10 @@
       "tone": "green"
     },
     {
-      "label": "2026 mine supply growth",
-      "value": "TODO",
-      "detail": "REQ June 2026 says global supply is rising but the accessible report summary does not publish a single 2026 global mine-supply growth percentage; left TODO rather than inferred.",
-      "tone": "blue"
+      "label": "2026 seaborne iron ore growth",
+      "value": "SUPPLY +1.5% / DEMAND +0.5%",
+      "detail": "Internal base case: seaborne iron ore supply growth +1.5% and demand growth +0.5% in 2026, implying a 16.3 Mt surplus. Anchored to World Steel Association's 2025 extra-regional iron ore trade baseline; growth rates are internal assumptions.",
+      "tone": "green"
     },
     {
       "label": "Seaborne market balance",
