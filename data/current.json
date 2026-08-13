@@ -1,10 +1,10 @@
 {
   "meta": {
-    "as_of": "12 August 2026",
-    "generated_at": "2026-08-12T14:16:15+00:00",
-    "next_refresh": "19 August 2026",
-    "sources_checked": 0,
-    "review_status": "offline validation",
+    "as_of": "13 August 2026",
+    "generated_at": "2026-08-13T15:11:56+00:00",
+    "next_refresh": "20 August 2026",
+    "sources_checked": 16,
+    "review_status": "automated source pass; no flagged changes",
     "schema_version": 1
   },
   "kpis": [
@@ -331,9 +331,21 @@
     ],
     "scenarios": {
       "bear": {
-        "years": [2025, 2026, 2027],
-        "supply": [1633.9, 1666.6, 1699.9],
-        "demand": [1633.9, 1625.7, 1617.6],
+        "years": [
+          2025,
+          2026,
+          2027
+        ],
+        "supply": [
+          1633.9,
+          1666.6,
+          1699.9
+        ],
+        "demand": [
+          1633.9,
+          1625.7,
+          1617.6
+        ],
         "note": "Internal downside-demand scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the directional premise of rising supply and softening steel demand. Internal extensions: supply grows 2.0% a year (2026: 1,633.9 × 1.020 = 1,666.6 Mt; 2027: 1,666.6 × 1.020 = 1,699.9 Mt), while demand falls 0.5% a year (2026: 1,633.9 × 0.995 = 1,625.7 Mt; 2027: 1,625.7 × 0.995 = 1,617.6 Mt). Rounded to 0.1 Mt.",
         "assumptions": [
           {
@@ -354,9 +366,21 @@
         ]
       },
       "base": {
-        "years": [2025, 2026, 2027],
-        "supply": [1633.9, 1658.4, 1683.3],
-        "demand": [1633.9, 1642.1, 1650.3],
+        "years": [
+          2025,
+          2026,
+          2027
+        ],
+        "supply": [
+          1633.9,
+          1658.4,
+          1683.3
+        ],
+        "demand": [
+          1633.9,
+          1642.1,
+          1650.3
+        ],
         "note": "Internal central scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the directional premise of rising supply and softening steel demand. Internal extensions: supply grows 1.5% a year (2026: 1,633.9 × 1.015 = 1,658.4 Mt; 2027: 1,658.4 × 1.015 = 1,683.3 Mt), while demand grows 0.5% a year (2026: 1,633.9 × 1.005 = 1,642.1 Mt; 2027: 1,642.1 × 1.005 = 1,650.3 Mt). Rounded to 0.1 Mt.",
         "assumptions": [
           {
@@ -377,9 +401,21 @@
         ]
       },
       "bull": {
-        "years": [2025, 2026, 2027],
-        "supply": [1633.9, 1642.1, 1650.3],
-        "demand": [1633.9, 1658.4, 1683.3],
+        "years": [
+          2025,
+          2026,
+          2027
+        ],
+        "supply": [
+          1633.9,
+          1642.1,
+          1650.3
+        ],
+        "demand": [
+          1633.9,
+          1658.4,
+          1683.3
+        ],
         "note": "Internal upside-demand scenario, not a third-party forecast. The 2025 supply and demand anchor is World Steel Association's 1,633.9 Mt of extra-regional iron ore trade in 2025; using the same observed trade total on both sides keeps the seaborne balance definition consistent. REQ June 2026 supplies the regional premise that India, Southeast Asia and the Middle East offset falling Chinese steel output. Internal extensions: supply grows 0.5% a year (2026: 1,633.9 × 1.005 = 1,642.1 Mt; 2027: 1,642.1 × 1.005 = 1,650.3 Mt), while demand grows 1.5% a year (2026: 1,633.9 × 1.015 = 1,658.4 Mt; 2027: 1,658.4 × 1.015 = 1,683.3 Mt). Rounded to 0.1 Mt.",
         "assumptions": [
           {

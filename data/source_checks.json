@@ -1,24 +1,26 @@
 {
-  "generated_at": "2026-08-12T14:16:15+00:00",
+  "generated_at": "2026-08-13T15:11:56+00:00",
   "checks": [
     {
       "id": "rio-tinto-sec-6k",
       "name": "Rio Tinto — SEC EDGAR 6-K filings index",
       "tier": 1,
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "926ace814f3942d30dda2ac3b17b3337d345335720cf67bf943fe2be2745745c",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [],
+      "content_sample": "EDGAR Search Results SEC.gov EDGAR Latest Filings Filings search tools EDGAR Company Search Results SEC Home » Company Search » Current Page Mailing Address RIO TINTO SERVICES INC. 80 STATE STREET ALBANY NY 12207-2543 Business Address 6 ST JAMES'S SQUARE LONDON, SW1Y 4AD X0 00000 801-204-8000 RIO TINTO PLC CIK #: 0000863064 (see all company filings) SIC : 1000 - METAL MINING State location: X0 | State of Inc.: X0 | Fiscal Year End: 1231 formerly:"
     },
     {
       "id": "bhp-media-releases",
       "name": "BHP — Media centre releases (Operational Review index)",
       "tier": 1,
       "url": "https://www.bhp.com/news/media-centre",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden",
       "fingerprint": "",
       "changed": false,
       "keyword_hits": []
@@ -28,96 +30,197 @@
       "name": "Fortescue — Results and operational performance index",
       "tier": 1,
       "url": "https://investors.fortescue.com/en/results-and-operational-performance",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "27fe76f82abeb81bdf78d5b59c5783283504873d53e4e8ada308c8882078e3e6",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [
+        "quarterly production report"
+      ],
+      "content_sample": "Filter by year 2026 2025 Filter by category FY26 Half Year FY26 Q1 FY26 Q2 FY26 Q3 FY26 Q4 31 Jul 2026 June 2026 Quarterly Production Report (3.54 kb) 31 Jul 2026 June 2026 Quarterly Production Report - Investor and Analyst Call Transcript (2.51 kb) 24 Apr 2026 March 2026 Quarterly Production Report - Investor and Analyst Call Transcript (2.67 kb) 24 Apr 2026 March 2026 Quarterly Production Report (3.41 kb) 25 Feb 2026 FY26 Half Year Results - An"
     },
     {
       "id": "vale-production-sales-landing",
       "name": "Vale — Production and sales report landing page",
       "tier": 1,
       "url": "https://vale.com/investors",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "d48d65d959dcce63a59dec512322ce34d34924daa7fa1e75ce17b587e1f614e2",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [
+        "production and sales",
+        "Carajás"
+      ],
+      "content_sample": "Institutional Presentation Click to acess Investor Toolkit Click to acess News Vale's Production and Sales report for 2Q26 is now available Vale announces dates for 2Q26 performance report Vale Reinforces Pioneering Approach in New ISSB-Standard Report, Highlighting Circular Economy as a Business Opportunity Check out the 1Q26 Financial Results Check out the Production and sales in 1Q26 and 2026 Scroll to see more Quarterly Reports Our latest fin"
     },
     {
       "id": "anglo-american-production-report",
       "name": "Anglo American — Press releases index (quarterly production reports)",
       "tier": 1,
       "url": "https://www.angloamerican.com/media/press-releases",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "0bb37da6c2ad7e9ef7d01259857c4fdab822d09cf2fc8b9450711e4c5125a254",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [
+        "premium iron ore",
+        "production report"
+      ],
+      "content_sample": "skip to main content Close Home About us Our Purpose and Values At a glance Our strategy What we do Where we operate History Leadership team Governance Sponsorship Marketing – solutions for our customers Our portfolio Our products Overview Copper Premium iron ore Crop nutrients Nickel Diamonds Steelmaking coal Manganese Our projects Overview Sakatti Woodsmith Sustainability Strategy Our approach Overview Our material matters Trusted Corporate Lea"
     },
     {
       "id": "champion-iron-asx-announcements",
       "name": "Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
       "tier": 1,
       "url": "https://www.asx.com.au/markets/company/CIA",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "967b49df03c0ba8918ff284c22e09f43f29876b6e6ddd2a86424ba3cd8355a1d",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [],
+      "content_sample": "CIA share price and company information for ASX:CIA --> --> --> --> --> --> ASX --> --> Login {{numOfNotifications}} account_circle {{ displayName }} account_circle ASX Sharemarket Game Frequently asked questions (FAQs) --> ASX Schools Sharemarket Game Frequently Asked Questions (FAQs) My dashboard My profile Download Legacy Watchlist --> Logout {{ item.name }} {{item.marketNotificationCount}} {{item.marketNotificationCount}} No watchlists {{numO"
     },
     {
       "id": "arcelormittal-liberia-sec-6k",
       "name": "ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
       "tier": 1,
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "07730e54488a9e07974d62b553a4fd11df96aa61c3017344a299e6388788387b",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [],
+      "content_sample": "EDGAR Search Results SEC.gov EDGAR Latest Filings Filings search tools EDGAR Company Search Results SEC Home » Company Search » Current Page Mailing Address 24-26, BOULEVARD D?AVRANCHES L-1160 LUXEMBOURG GRAND DUCHY OF LUXEMBOURG N4 00000 Business Address 24-26, BOULEVARD D?AVRANCHES L-1160 LUXEMBOURG GRAND DUCHY OF LUXEMBOURG N4 00000 35247922151 ArcelorMittal CIK #: 0001243429 (see all company filings) SIC : 3312 - STEEL WORKS, BLAST FURNACES R"
+    },
+    {
+      "id": "anglo-american-kumba-press-releases",
+      "name": "Anglo American Kumba Iron Ore — Press releases index (Sishen + Kolomela)",
+      "tier": 1,
+      "url": "https://www.angloamericankumba.com/media/press-releases",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "cb00ee9dd986d07850c71774757902c71e918e3fe9cb26c32280c93fcebdb339",
+      "changed": false,
+      "keyword_hits": [
+        "Kumba",
+        "Sishen",
+        "production and sales report"
+      ],
+      "content_sample": "Press Release | Anglo American – Kumba Iron Ore . Press releases Register for email alerts Press releases 2026 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 28 July, 2026 Kumba Iron Ore's interim results for the six months ended 30 June 2026 Kumba Iron Ore's interim results for the six months ended 30 June 2026 Copy Link Copied! 23 July, 2026 Kumba enters into embedded solar energy offtake agreement with Envusa Energy SIOC has enter"
+    },
+    {
+      "id": "lkab-press-releases",
+      "name": "LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
+      "tier": 1,
+      "url": "https://lkab.com/en/press/",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "39b7f4ce52dc9d2420c7ca27a673fa314054f8a4077a1c22b1018805cfb4f891",
+      "changed": false,
+      "keyword_hits": [
+        "LKAB",
+        "Kiruna",
+        "Malmberget"
+      ],
+      "content_sample": "Press Archive - LKAB Dark mode Light mode Menu Dark mode Light mode Who we are What we do Work with us Community development Svenska News Financial information Contact us Search Search Sales and support Suppliers Privacy and law From A to Z © LKAB 0771-760 000 info@lkab.com Press Press release August 13, 2026 Interim Report April-June 2026: Lower earnings weighed down by foreign exchange effects and increased costs LKAB ends the first half of 202"
+    },
+    {
+      "id": "labrador-iron-ore-royalty-corp",
+      "name": "Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
+      "tier": 1,
+      "url": "https://labradorironore.com/news/",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "41d7afbe518d82a95bff78e9958d4c664a18d6e5cff5951d39cb2f9290e4d5a9",
+      "changed": false,
+      "keyword_hits": [
+        "Iron Ore Company of Canada",
+        "IOC"
+      ],
+      "content_sample": "News | Labrador Iron Ore LIF $ | Home Company Company Company Profile Directors and Officers Corporate Governance Corporate Directory Iron Ore Company of Canada Iron Ore Company of Canada Overview Information Links Investors Investors Why Invest? Stock Information Financial Statements Presentations Financial Calendar Dividend History Corporate Filings Information Links News Responsibility Responsibility Environment and Sustainability People Suppl"
+    },
+    {
+      "id": "samarco-press-releases",
+      "name": "Samarco — Company site (Germano Complex, Vale/BHP JV)",
+      "tier": 1,
+      "url": "https://www.samarco.com/",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "fea12dcdf4d87983b9d6e02afe8b24103346212871c669762f712f05b21d9eaf",
+      "changed": false,
+      "keyword_hits": [
+        "Samarco"
+      ],
+      "content_sample": "Home - Samarco Mineração A- A+ Contraste Acessibilidades 1 Conteúdo 2 Menu 3 Rodapé PT EN Sobre Sustentabilidade Reparação Estruturas geotécnicas Fornecedores Relações com Investidores Imprensa Contato Sobre Quem somos Pessoas Governança corporativa Processo produtivo Porto Samarco Comunica Retomada Recuperação judicial O que é Situação Financeira Dívidas Fatos Documentos Formulário Digital para Credores Sustentabilidade Estratégia de Sustentabil"
+    },
+    {
+      "id": "nmdc-investor-news",
+      "name": "NMDC Limited — Investor news (Bailadila + Donimalai)",
+      "tier": 1,
+      "url": "https://www.nmdc.co.in/investors/investor-news",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "37ef3853fe32582ce77a07382753c0f1da8973c2169b9bb4ff91c4503a2ceb57",
+      "changed": false,
+      "keyword_hits": [
+        "NMDC"
+      ],
+      "content_sample": "NMDC Limited"
     },
     {
       "id": "usgs-iron-ore-mcs",
       "name": "USGS — Mineral Commodity Summaries (iron ore)",
       "tier": 2,
       "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:202",
+      "fingerprint": "bc74bf86fbc31be6dd4708f2ef0eb52541c5fe408ca2ae30e9964813588040f0",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [],
+      "content_sample": "JavaScript is disabled In order to continue, we need to verify that you're not a robot. This requires JavaScript. Enable JavaScript and then reload the page."
     },
     {
       "id": "world-steel-association-stats",
       "name": "World Steel Association — Steel statistics",
       "tier": 2,
       "url": "https://worldsteel.org/data/",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "893afbba8e3743af2adf7552e60b3d13037328c79adbf68cdcc900a9d46c3c2b",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [
+        "crude steel production",
+        "China",
+        "monthly"
+      ],
+      "content_sample": "Data - worldsteel.org Skip to content worldsteel English 中文 Member extranet Data subscribers Become a member Toggle navigation MENU English 中文 About us About steel Safety and health Climate action Wider sustainability Our people Steel is everywhere Media Data Advanced Search Search all Facts Pages Press Releases steelStories Member extranet Data subscribers Become a member Home Data Data Steel Data Viewer Monthly crude steel production data Annua"
     },
     {
       "id": "iron-ore-futures-price-context",
       "name": "SGX iron ore 62% Fe futures — price reference (via Investing.com, free aggregator quote)",
       "tier": 2,
       "url": "https://www.investing.com/commodities/iron-ore-62-cfr-futures",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "f618084a8fc89069c160ee321b53959a529d81c1a23105a46b973a8096dc4b7c",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [
+        "iron ore",
+        "62% Fe",
+        "futures",
+        "settlement"
+      ],
+      "content_sample": "Iron ore fines 62% Fe CFR Futures Price Today - Investing.com Investing.com - Financial Markets Worldwide Open in App Popular Searches Please try another search 55% OFF: August Sale 🔥 Sign In Free Sign Up English (UK) English (India) English (Canada) English (Australia) English (South Africa) English (Philippines) English (Nigeria) Deutsch Español (España) Español (México) Français Italiano Nederlands Polski Português (Portugal) Português (Brasil"
     },
     {
       "id": "aus-req-outlook",
       "name": "Australian Office of the Chief Economist — Resources and Energy Quarterly (iron ore outlook)",
       "tier": 2,
       "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-all",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "error",
+      "error": "The read operation timed out",
       "fingerprint": "",
       "changed": false,
       "keyword_hits": []
@@ -127,22 +230,33 @@
       "name": "IBRAM (Instituto Brasileiro de Mineração) — sector investment and production forecasts",
       "tier": 2,
       "url": "https://ibram.org.br/en/",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "229f184aa80fc43c188cd822902582d664aa9d75d67fdc16169664da222b317d",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [
+        "IBRAM",
+        "Brazil"
+      ],
+      "content_sample": "IBRAM - Mining in Brazil MEMBER PORTAL IBRAM SYSTEM PORTAL OF MINERALS BRAZILIAN MINERALS STORE PT EN ES --> menu IBRAM ABOUT US About IBRAM Governance Board of Directors Executive Board Our team WHAT WE DO Committee and Working Groups Appointments ESG Innovation IPS IBRAM Map TSM Brazil Unibram ASSOCIATES IBRAM ASSOCIATES Our Associates Why join? Associates' Portfolio Become a member CONTENTS CONTENTS Presentations Data from IBRAM E-Book Activit"
     },
     {
       "id": "nrcan-canada-stats",
       "name": "Natural Resources Canada — Iron ore facts / Annual Statistics of Mineral Production",
       "tier": 2,
       "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
-      "checked_at": "2026-08-12T14:16:15+00:00",
-      "status": "offline-skip",
-      "fingerprint": "",
+      "checked_at": "2026-08-13T15:11:56+00:00",
+      "status": "ok:200",
+      "fingerprint": "c6c8c5ae1a46a17817087c192b80a3de4f1b43ab1cc5e72bf9911fa46a449a0c",
       "changed": false,
-      "keyword_hits": []
+      "keyword_hits": [
+        "iron ore",
+        "Canada",
+        "production",
+        "exports",
+        "Natural Resources Canada"
+      ],
+      "content_sample": "Iron ore facts - Natural Resources Canada Skip to main content Skip to \"About government\" Language selection Language selection Français fr / Gouvernement du Canada Search Search the website Search Menu Main Menu Home Jobs and the workplace Immigration and citizenship Travel and tourism Business and industry Benefits Health Taxes Environment and natural resources National security and defence Culture, history and sport Policing, justice and emerg"
     }
   ]
 }

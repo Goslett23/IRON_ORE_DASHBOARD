@@ -1,9 +1,12 @@
 {
-  "generated_at": "2026-08-12T14:16:15+00:00",
+  "generated_at": "2026-08-13T15:11:56+00:00",
   "review_required": false,
   "curated_candidates": [],
   "wide_web_candidates": [],
   "wide_web_status": {
-    "status": "ok"
+    "source_tier": 3,
+    "status": "error",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "retrieved_at": "2026-08-13T15:11:56+00:00"
   }
 }
