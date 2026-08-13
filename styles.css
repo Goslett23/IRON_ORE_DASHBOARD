@@ -367,7 +367,22 @@ main {
   background: var(--green-500);
 }
 
-.risk-dot.reference {
+.risk-dot.reference-positive {
+  border: 1px solid color-mix(in srgb, var(--green-500) 70%, var(--white));
+  background: color-mix(in srgb, var(--green-500) 55%, var(--white));
+}
+
+.risk-dot.reference-transitional {
+  border: 1px solid color-mix(in srgb, var(--blue-500) 70%, var(--white));
+  background: color-mix(in srgb, var(--blue-500) 55%, var(--white));
+}
+
+.risk-dot.reference-weak {
+  border: 1px solid color-mix(in srgb, var(--red-300) 70%, var(--white));
+  background: color-mix(in srgb, var(--red-300) 60%, var(--white));
+}
+
+.risk-dot.reference-unknown {
   border: 1px solid color-mix(in srgb, var(--blue-900) 50%, var(--white));
   background: color-mix(in srgb, var(--blue-900) 28%, var(--white));
 }
@@ -532,6 +547,11 @@ td {
 .reference-table .reference-status {
   color: var(--blue-900);
   font-weight: 700;
+}
+
+.reference-table .reference-status .risk-dot {
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 .reference-table .reference-status small {

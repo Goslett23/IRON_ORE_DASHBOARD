@@ -117,6 +117,22 @@ function riskColor(risk) {
   return COLORS.green500;
 }
 
+const REFERENCE_TONE = {
+  positive: { fill: "rgba(0, 150, 91, 0.55)", line: "rgba(0, 100, 60, 0.7)" },
+  transitional: { fill: "rgba(0, 122, 168, 0.55)", line: "rgba(0, 74, 100, 0.7)" },
+  weak: { fill: "rgba(255, 128, 161, 0.6)", line: "rgba(168, 0, 47, 0.6)" },
+  unknown: { fill: "rgba(0, 37, 50, 0.28)", line: "rgba(0, 37, 50, 0.48)" },
+};
+
+function referenceStatusTone(mine) {
+  const label = (mine.status || "").toLowerCase();
+  if (!label) return "unknown";
+  if (/below guidance|output reset|declin|halt|shutdown/.test(label)) return "weak";
+  if (/ramp|underway|weak|mixed/.test(label)) return "transitional";
+  if (/record|on guidance|stable|surging|on track/.test(label)) return "positive";
+  return "unknown";
+}
+
 function trendText(mine) {
   if (mine.status.toLowerCase().includes("recover")) return "Improving";
   if (mine.status.toLowerCase().includes("resolved")) return "Easing";
@@ -152,6 +168,7 @@ function renderMap() {
   const referenceMines = state.data.reference_mines?.items || [];
   const selected = state.selectedMine;
   const map = $("#mine-map");
+  const referenceTones = referenceMines.map((mine) => REFERENCE_TONE[referenceStatusTone(mine)]);
   const referenceTrace = {
     type: "scattergeo",
     mode: "markers",
@@ -160,9 +177,9 @@ function renderMap() {
     text: referenceMines.map((mine) => mine.name),
     customdata: referenceMines.map((mine) => [mine.country, mine.status || "Status not yet checked"]),
     marker: {
-      color: "rgba(0, 37, 50, 0.28)",
+      color: referenceTones.map((tone) => tone.fill),
       size: 7,
-      line: { color: "rgba(0, 37, 50, 0.48)", width: 0.8 },
+      line: { color: referenceTones.map((tone) => tone.line), width: 0.8 },
     },
     hovertemplate: "<b>%{text}</b><br>%{customdata[0]} · %{customdata[1]}<extra></extra>",
   };
@@ -275,7 +292,7 @@ function renderReferenceTable() {
           <td>
             ${
               mine.status
-                ? `<span class="reference-status">${escapeHtml(mine.status)}<small>${escapeHtml(mine.status_detail || "")}</small></span>`
+                ? `<span class="reference-status"><i class="risk-dot reference-${referenceStatusTone(mine)}"></i>${escapeHtml(mine.status)}<small>${escapeHtml(mine.status_detail || "")}</small></span>`
                 : "Status not yet checked"
             }
           </td>
