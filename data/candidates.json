@@ -1,12 +1,59 @@
 {
-  "generated_at": "2026-08-13T15:11:56+00:00",
-  "review_required": false,
-  "curated_candidates": [],
+  "generated_at": "2026-08-17T07:17:32+00:00",
+  "review_required": true,
+  "curated_candidates": [
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Vale — Production and sales report landing page",
+      "url": "https://vale.com/investors",
+      "keyword_hits": [
+        "production and sales",
+        "Carajás"
+      ],
+      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
+      "url": "https://www.asx.com.au/markets/company/CIA",
+      "keyword_hits": [],
+      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: USGS — Mineral Commodity Summaries (iron ore)",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "keyword_hits": [
+        "iron ore",
+        "world production",
+        "China"
+      ],
+      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: IBRAM (Instituto Brasileiro de Mineração) — sector investment and production forecasts",
+      "url": "https://ibram.org.br/en/",
+      "keyword_hits": [
+        "IBRAM",
+        "Brazil"
+      ],
+      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "reviewed": false
+    }
+  ],
   "wide_web_candidates": [],
   "wide_web_status": {
     "source_tier": 3,
     "status": "error",
     "error": "Expecting value: line 1 column 1 (char 0)",
-    "retrieved_at": "2026-08-13T15:11:56+00:00"
+    "retrieved_at": "2026-08-17T07:17:32+00:00"
   }
 }

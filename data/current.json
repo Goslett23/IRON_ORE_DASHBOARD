@@ -1,10 +1,10 @@
 {
   "meta": {
-    "as_of": "13 August 2026",
-    "generated_at": "2026-08-13T15:11:56+00:00",
-    "next_refresh": "20 August 2026",
-    "sources_checked": 16,
-    "review_status": "automated source pass; no flagged changes",
+    "as_of": "17 August 2026",
+    "generated_at": "2026-08-17T07:17:32+00:00",
+    "next_refresh": "24 August 2026",
+    "sources_checked": 19,
+    "review_status": "candidate changes awaiting analyst review",
     "schema_version": 1
   },
   "kpis": [
@@ -400,7 +400,9 @@
         "label": "Global iron ore mine production growth (all countries)",
         "value": "+0.3% p.a. forecast to 2031",
         "signal": "LOOSENING — REQ GLOBAL SUPPLY, NOT TRACKED MINES",
-        "bar": { "value": 0.3 },
+        "bar": {
+          "value": 0.3
+        },
         "source": {
           "name": "REQ — Resources and Energy Quarterly June 2026",
           "url": "https://www.industry.gov.au/sites/default/files/2026-07/resources-and-energy-quarterly-june-2026.pdf",
@@ -413,9 +415,18 @@
         "value": "173.26 Mt (−0.8% w/w)",
         "signal": "TIGHTENING — CHINA PORT STOCKS, NOT GLOBAL",
         "timeseries": [
-          { "date": "2026-03-19", "value": 178.1 },
-          { "date": "2026-04-23", "value": 173.36 },
-          { "date": "2026-07-09", "value": 173.26 }
+          {
+            "date": "2026-03-19",
+            "value": 178.1
+          },
+          {
+            "date": "2026-04-23",
+            "value": 173.36
+          },
+          {
+            "date": "2026-07-09",
+            "value": 173.26
+          }
         ],
         "source": {
           "name": "Mysteel — Weekly: China's iron ore port stocks dip for another week",
@@ -428,7 +439,9 @@
         "label": "Australian iron ore export volumes, March quarter 2026",
         "value": "+6% y/y",
         "signal": "LOOSENING",
-        "bar": { "value": 6 },
+        "bar": {
+          "value": 6
+        },
         "source": {
           "name": "REQ — Resources and Energy Quarterly June 2026",
           "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-june-2026",
@@ -440,7 +453,9 @@
         "label": "Global crude steel production outlook",
         "value": "1,849.4 Mt in 2025 (−2.0% y/y)",
         "signal": "SOFT NEAR TERM / GROWTH TO 2031",
-        "bar": { "value": -2.0 },
+        "bar": {
+          "value": -2.0
+        },
         "source": {
           "name": "World Steel Association — 2025 global crude steel production totals",
           "url": "https://worldsteel.org/media/press-releases/2026/december-2025-crude-steel-production-2025-global-crude-steel-production/",
@@ -453,10 +468,22 @@
         "value": "736.841 Mt (+5.9% y/y)",
         "signal": "GROWTH DECELERATING — CHINA IMPORT FLOW, NOT PORT STOCKS. Values shown are the y/y growth rate of cumulative imports at each reporting milestone (not the tonnage itself), which is why the line falls even though import volumes are still rising.",
         "timeseries": [
-          { "date": "2026-03-31", "value": 10.5 },
-          { "date": "2026-04-30", "value": 8.0 },
-          { "date": "2026-06-30", "value": 6.3 },
-          { "date": "2026-07-31", "value": 5.9 }
+          {
+            "date": "2026-03-31",
+            "value": 10.5
+          },
+          {
+            "date": "2026-04-30",
+            "value": 8.0
+          },
+          {
+            "date": "2026-06-30",
+            "value": 6.3
+          },
+          {
+            "date": "2026-07-31",
+            "value": 5.9
+          }
         ],
         "source": {
           "name": "SteelOrbis — China's iron ore imports increase by 5.9 percent in January-July 2026",
@@ -469,7 +496,12 @@
         "label": "62% Fe iron ore price (CFR China)",
         "value": "$95.09/t",
         "signal": "Down 6.8% over the past year; currently near the bottom of its 52-week range of $93.66–$111.42/t, shown below. Delayed quote as of 12 Aug 2026 via a free aggregator, not a primary exchange feed.",
-        "range": { "low": 93.66, "high": 111.42, "current": 95.09, "trend": "down" },
+        "range": {
+          "low": 93.66,
+          "high": 111.42,
+          "current": 95.09,
+          "trend": "down"
+        },
         "source": {
           "name": "SGX Iron Ore 62% Fe futures (via Investing.com)",
           "url": "https://www.investing.com/commodities/iron-ore-62-cfr-futures",
@@ -482,14 +514,46 @@
         "value": "Brazil $33.95/t · Australia $10.95/t",
         "signal": "Two separate lanes, not one blended figure — Australia's route is roughly a third of Brazil's cost, reflecting the much shorter shipping distance to China. Brazil (Tubarão-Qingdao) rose from $21.35/t (19 Dec 2025) to a two-year high near $37/t in mid-May 2026 — partly driven by a Middle East conflict beginning 28 Feb 2026 that lifted fuel costs and shipping uncertainty — before easing to $33.95/t by 12 Jun 2026. Australia (West Australia-Qingdao, the Baltic Exchange's \"C5\" route) rose from $10.78/t (21 Nov 2025) to $15.25/t by 22 May 2026, then fell 24.7% in one week to $10.95/t by 12 Jun 2026 — Australia's route has shown sharper week-on-week swings than Brazil's on these data points.",
         "timeseries": [
-          { "route": "Brazil (Tubarão-Qingdao)", "date": "2025-12-19", "value": 21.35 },
-          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-03-26", "value": 30.65 },
-          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-04-24", "value": 33 },
-          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-05-22", "value": 36.15 },
-          { "route": "Brazil (Tubarão-Qingdao)", "date": "2026-06-12", "value": 33.95 },
-          { "route": "Australia (West Australia-Qingdao)", "date": "2025-11-21", "value": 10.78 },
-          { "route": "Australia (West Australia-Qingdao)", "date": "2026-05-22", "value": 15.25 },
-          { "route": "Australia (West Australia-Qingdao)", "date": "2026-06-12", "value": 10.95 }
+          {
+            "route": "Brazil (Tubarão-Qingdao)",
+            "date": "2025-12-19",
+            "value": 21.35
+          },
+          {
+            "route": "Brazil (Tubarão-Qingdao)",
+            "date": "2026-03-26",
+            "value": 30.65
+          },
+          {
+            "route": "Brazil (Tubarão-Qingdao)",
+            "date": "2026-04-24",
+            "value": 33
+          },
+          {
+            "route": "Brazil (Tubarão-Qingdao)",
+            "date": "2026-05-22",
+            "value": 36.15
+          },
+          {
+            "route": "Brazil (Tubarão-Qingdao)",
+            "date": "2026-06-12",
+            "value": 33.95
+          },
+          {
+            "route": "Australia (West Australia-Qingdao)",
+            "date": "2025-11-21",
+            "value": 10.78
+          },
+          {
+            "route": "Australia (West Australia-Qingdao)",
+            "date": "2026-05-22",
+            "value": 15.25
+          },
+          {
+            "route": "Australia (West Australia-Qingdao)",
+            "date": "2026-06-12",
+            "value": 10.95
+          }
         ],
         "source": {
           "name": "IndexBox/Kallanish — Iron Ore Freight Rates Drop in June 2026",
