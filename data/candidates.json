@@ -1,7 +1,18 @@
 {
-  "generated_at": "2026-08-17T07:17:32+00:00",
+  "generated_at": "2026-08-24T07:29:27+00:00",
   "review_required": true,
   "curated_candidates": [
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Fortescue — Results and operational performance index",
+      "url": "https://investors.fortescue.com/en/results-and-operational-performance",
+      "keyword_hits": [
+        "quarterly production report"
+      ],
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
+      "reviewed": false
+    },
     {
       "source_tier": 1,
       "status": "source-changed",
@@ -11,29 +22,40 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
       "reviewed": false
     },
     {
       "source_tier": 1,
       "status": "source-changed",
-      "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
-      "url": "https://www.asx.com.au/markets/company/CIA",
+      "title": "New content detected: ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
       "keyword_hits": [],
-      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
       "reviewed": false
     },
     {
-      "source_tier": 2,
+      "source_tier": 1,
       "status": "source-changed",
-      "title": "New content detected: USGS — Mineral Commodity Summaries (iron ore)",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "title": "New content detected: LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
+      "url": "https://lkab.com/en/press/",
       "keyword_hits": [
-        "iron ore",
-        "world production",
-        "China"
+        "LKAB",
+        "Kiruna",
+        "Malmberget"
       ],
-      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Samarco — Company site (Germano Complex, Vale/BHP JV)",
+      "url": "https://www.samarco.com/",
+      "keyword_hits": [
+        "Samarco"
+      ],
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
       "reviewed": false
     },
     {
@@ -45,7 +67,40 @@
         "IBRAM",
         "Brazil"
       ],
-      "retrieved_at": "2026-08-17T07:17:32+00:00",
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: Mysteel — China iron ore port inventory (weekly)",
+      "url": "https://www.mysteel.net/h/iron-ore/",
+      "keyword_hits": [
+        "China",
+        "iron ore stocks",
+        "stockpile"
+      ],
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: SteelOrbis — China iron ore imports",
+      "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
+      "keyword_hits": [
+        "China"
+      ],
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
+      "url": "https://www.indexbox.io/blog/",
+      "keyword_hits": [],
+      "retrieved_at": "2026-08-24T07:29:27+00:00",
       "reviewed": false
     }
   ],
@@ -54,6 +109,6 @@
     "source_tier": 3,
     "status": "error",
     "error": "Expecting value: line 1 column 1 (char 0)",
-    "retrieved_at": "2026-08-17T07:17:32+00:00"
+    "retrieved_at": "2026-08-24T07:29:27+00:00"
   }
 }
