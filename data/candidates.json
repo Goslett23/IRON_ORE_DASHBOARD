@@ -1,16 +1,14 @@
 {
-  "generated_at": "2026-08-31T13:54:02+00:00",
+  "generated_at": "2026-09-07T12:35:47+00:00",
   "review_required": true,
   "curated_candidates": [
     {
       "source_tier": 1,
       "status": "source-changed",
-      "title": "New content detected: Fortescue — Results and operational performance index",
-      "url": "https://investors.fortescue.com/en/results-and-operational-performance",
-      "keyword_hits": [
-        "quarterly production report"
-      ],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
+      "title": "New content detected: Rio Tinto — SEC EDGAR 6-K filings index",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
+      "keyword_hits": [],
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
       "reviewed": false
     },
     {
@@ -22,19 +20,7 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
-      "url": "https://lkab.com/en/press/",
-      "keyword_hits": [
-        "LKAB",
-        "Malmberget"
-      ],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
       "reviewed": false
     },
     {
@@ -45,7 +31,7 @@
       "keyword_hits": [
         "Samarco"
       ],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
       "reviewed": false
     },
     {
@@ -57,7 +43,7 @@
         "IBRAM",
         "Brazil"
       ],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
       "reviewed": false
     },
     {
@@ -70,7 +56,7 @@
         "iron ore stocks",
         "stockpile"
       ],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
       "reviewed": false
     },
     {
@@ -81,7 +67,19 @@
       "keyword_hits": [
         "China"
       ],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
+      "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
+      "keyword_hits": [
+        "freight rate",
+        "Capesize"
+      ],
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
       "reviewed": false
     },
     {
@@ -90,7 +88,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-08-31T13:54:02+00:00",
+      "retrieved_at": "2026-09-07T12:35:47+00:00",
       "reviewed": false
     }
   ],
@@ -98,7 +96,7 @@
   "wide_web_status": {
     "source_tier": 3,
     "status": "error",
-    "error": "<urlopen error _ssl.c:1015: The handshake operation timed out>",
-    "retrieved_at": "2026-08-31T13:54:02+00:00"
+    "error": "HTTP Error 429: Too Many Requests",
+    "retrieved_at": "2026-09-07T12:35:47+00:00"
   }
 }
