@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T12:52:44+00:00",
+  "generated_at": "2026-09-21T12:51:01+00:00",
   "review_required": true,
   "curated_candidates": [
     {
@@ -11,7 +11,7 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
       "reviewed": false
     },
     {
@@ -20,7 +20,32 @@
       "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
       "url": "https://www.asx.com.au/markets/company/CIA",
       "keyword_hits": [],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
+      "url": "https://lkab.com/en/press/",
+      "keyword_hits": [
+        "LKAB",
+        "Kiirunavaara",
+        "Malmberget"
+      ],
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
+      "url": "https://labradorironore.com/news/",
+      "keyword_hits": [
+        "Iron Ore Company of Canada",
+        "IOC"
+      ],
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
       "reviewed": false
     },
     {
@@ -31,7 +56,20 @@
       "keyword_hits": [
         "Samarco"
       ],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: USGS — Mineral Commodity Summaries (iron ore)",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "keyword_hits": [
+        "iron ore",
+        "world production",
+        "China"
+      ],
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
       "reviewed": false
     },
     {
@@ -41,9 +79,10 @@
       "url": "https://ibram.org.br/en/",
       "keyword_hits": [
         "IBRAM",
+        "investment",
         "Brazil"
       ],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
       "reviewed": false
     },
     {
@@ -56,7 +95,7 @@
         "iron ore stocks",
         "stockpile"
       ],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
       "reviewed": false
     },
     {
@@ -65,21 +104,9 @@
       "title": "New content detected: SteelOrbis — China iron ore imports",
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
       "keyword_hits": [
-        "China",
-        "iron ore imports"
+        "China"
       ],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 2,
-      "status": "source-changed",
-      "title": "New content detected: SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
-      "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
-      "keyword_hits": [
-        "Capesize"
-      ],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
       "reviewed": false
     },
     {
@@ -88,7 +115,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-09-14T12:52:44+00:00",
+      "retrieved_at": "2026-09-21T12:51:01+00:00",
       "reviewed": false
     }
   ],
@@ -97,6 +124,6 @@
     "source_tier": 3,
     "status": "error",
     "error": "HTTP Error 429: Too Many Requests",
-    "retrieved_at": "2026-09-14T12:52:44+00:00"
+    "retrieved_at": "2026-09-21T12:51:01+00:00"
   }
 }
