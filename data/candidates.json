@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T12:51:01+00:00",
+  "generated_at": "2026-09-28T13:58:06+00:00",
   "review_required": true,
   "curated_candidates": [
     {
@@ -11,41 +11,16 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     },
     {
       "source_tier": 1,
       "status": "source-changed",
-      "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
-      "url": "https://www.asx.com.au/markets/company/CIA",
+      "title": "New content detected: ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
       "keyword_hits": [],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
-      "url": "https://lkab.com/en/press/",
-      "keyword_hits": [
-        "LKAB",
-        "Kiirunavaara",
-        "Malmberget"
-      ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
-      "url": "https://labradorironore.com/news/",
-      "keyword_hits": [
-        "Iron Ore Company of Canada",
-        "IOC"
-      ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     },
     {
@@ -56,7 +31,7 @@
       "keyword_hits": [
         "Samarco"
       ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     },
     {
@@ -69,7 +44,7 @@
         "world production",
         "China"
       ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     },
     {
@@ -79,10 +54,9 @@
       "url": "https://ibram.org.br/en/",
       "keyword_hits": [
         "IBRAM",
-        "investment",
         "Brazil"
       ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     },
     {
@@ -95,7 +69,7 @@
         "iron ore stocks",
         "stockpile"
       ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     },
     {
@@ -106,7 +80,7 @@
       "keyword_hits": [
         "China"
       ],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     },
     {
@@ -115,7 +89,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-09-21T12:51:01+00:00",
+      "retrieved_at": "2026-09-28T13:58:06+00:00",
       "reviewed": false
     }
   ],
@@ -123,7 +97,7 @@
   "wide_web_status": {
     "source_tier": 3,
     "status": "error",
-    "error": "HTTP Error 429: Too Many Requests",
-    "retrieved_at": "2026-09-21T12:51:01+00:00"
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "retrieved_at": "2026-09-28T13:58:06+00:00"
   }
 }
