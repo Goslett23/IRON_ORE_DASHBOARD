@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-10-05T14:43:00+00:00",
+  "generated_at": "2026-10-12T15:28:52+00:00",
   "review_required": true,
   "curated_candidates": [
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Rio Tinto — SEC EDGAR 6-K filings index",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
-      "keyword_hits": [],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
-      "reviewed": false
-    },
     {
       "source_tier": 1,
       "status": "source-changed",
@@ -20,7 +11,7 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     },
     {
@@ -29,20 +20,7 @@
       "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
       "url": "https://www.asx.com.au/markets/company/CIA",
       "keyword_hits": [],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
-      "url": "https://lkab.com/en/press/",
-      "keyword_hits": [
-        "LKAB",
-        "Kiirunavaara",
-        "Malmberget"
-      ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     },
     {
@@ -54,20 +32,7 @@
         "Samarco",
         "Mariana"
       ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 2,
-      "status": "source-changed",
-      "title": "New content detected: USGS — Mineral Commodity Summaries (iron ore)",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
-      "keyword_hits": [
-        "iron ore",
-        "world production",
-        "China"
-      ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     },
     {
@@ -79,7 +44,7 @@
         "IBRAM",
         "Brazil"
       ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     },
     {
@@ -92,7 +57,7 @@
         "iron ore stocks",
         "stockpile"
       ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     },
     {
@@ -103,7 +68,7 @@
       "keyword_hits": [
         "China"
       ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     },
     {
@@ -112,10 +77,9 @@
       "title": "New content detected: SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
       "keyword_hits": [
-        "freight rate",
         "Capesize"
       ],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     },
     {
@@ -124,7 +88,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-10-05T14:43:00+00:00",
+      "retrieved_at": "2026-10-12T15:28:52+00:00",
       "reviewed": false
     }
   ],
@@ -133,6 +97,6 @@
     "source_tier": 3,
     "status": "error",
     "error": "Expecting value: line 1 column 1 (char 0)",
-    "retrieved_at": "2026-10-05T14:43:00+00:00"
+    "retrieved_at": "2026-10-12T15:28:52+00:00"
   }
 }
