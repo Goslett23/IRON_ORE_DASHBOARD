@@ -1,7 +1,27 @@
 {
-  "generated_at": "2026-10-12T15:28:52+00:00",
+  "generated_at": "2026-10-19T13:19:35+00:00",
   "review_required": true,
   "curated_candidates": [
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Rio Tinto — SEC EDGAR 6-K filings index",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
+      "keyword_hits": [],
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Fortescue — Results and operational performance index",
+      "url": "https://investors.fortescue.com/en/results-and-operational-performance",
+      "keyword_hits": [
+        "quarterly production report"
+      ],
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "reviewed": false
+    },
     {
       "source_tier": 1,
       "status": "source-changed",
@@ -11,28 +31,19 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
       "reviewed": false
     },
     {
       "source_tier": 1,
       "status": "source-changed",
-      "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
-      "url": "https://www.asx.com.au/markets/company/CIA",
-      "keyword_hits": [],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Samarco — Company site (Germano Complex, Vale/BHP JV)",
-      "url": "https://www.samarco.com/",
+      "title": "New content detected: Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
+      "url": "https://labradorironore.com/news/",
       "keyword_hits": [
-        "Samarco",
-        "Mariana"
+        "Iron Ore Company of Canada",
+        "IOC"
       ],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
       "reviewed": false
     },
     {
@@ -44,7 +55,7 @@
         "IBRAM",
         "Brazil"
       ],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
       "reviewed": false
     },
     {
@@ -57,7 +68,7 @@
         "iron ore stocks",
         "stockpile"
       ],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
       "reviewed": false
     },
     {
@@ -66,9 +77,10 @@
       "title": "New content detected: SteelOrbis — China iron ore imports",
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
       "keyword_hits": [
-        "China"
+        "China",
+        "iron ore imports"
       ],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
       "reviewed": false
     },
     {
@@ -77,9 +89,10 @@
       "title": "New content detected: SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
       "keyword_hits": [
+        "freight rate",
         "Capesize"
       ],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
       "reviewed": false
     },
     {
@@ -88,7 +101,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-10-12T15:28:52+00:00",
+      "retrieved_at": "2026-10-19T13:19:35+00:00",
       "reviewed": false
     }
   ],
@@ -96,7 +109,7 @@
   "wide_web_status": {
     "source_tier": 3,
     "status": "error",
-    "error": "Expecting value: line 1 column 1 (char 0)",
-    "retrieved_at": "2026-10-12T15:28:52+00:00"
+    "error": "HTTP Error 429: Too Many Requests",
+    "retrieved_at": "2026-10-19T13:19:35+00:00"
   }
 }
