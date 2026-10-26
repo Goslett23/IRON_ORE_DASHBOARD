@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-10-19T13:19:35+00:00",
+  "generated_at": "2026-10-26T13:06:18+00:00",
   "review_required": true,
   "curated_candidates": [
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Rio Tinto — SEC EDGAR 6-K filings index",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
-      "keyword_hits": [],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
-      "reviewed": false
-    },
     {
       "source_tier": 1,
       "status": "source-changed",
@@ -19,7 +10,7 @@
       "keyword_hits": [
         "quarterly production report"
       ],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     },
     {
@@ -31,19 +22,86 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     },
     {
       "source_tier": 1,
       "status": "source-changed",
-      "title": "New content detected: Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
-      "url": "https://labradorironore.com/news/",
+      "title": "New content detected: Anglo American — Press releases index (quarterly production reports)",
+      "url": "https://www.angloamerican.com/media/press-releases",
       "keyword_hits": [
-        "Iron Ore Company of Canada",
-        "IOC"
+        "premium iron ore",
+        "production report"
       ],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
+      "url": "https://www.asx.com.au/markets/company/CIA",
+      "keyword_hits": [],
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
+      "keyword_hits": [],
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Anglo American Kumba Iron Ore — Press releases index (Sishen + Kolomela)",
+      "url": "https://www.angloamericankumba.com/media/press-releases",
+      "keyword_hits": [
+        "Kumba",
+        "Sishen",
+        "production and sales report"
+      ],
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
+      "url": "https://lkab.com/en/press/",
+      "keyword_hits": [
+        "LKAB",
+        "Kiirunavaara",
+        "Malmberget"
+      ],
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: Samarco — Company site (Germano Complex, Vale/BHP JV)",
+      "url": "https://www.samarco.com/",
+      "keyword_hits": [
+        "Samarco",
+        "Germano"
+      ],
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 1,
+      "status": "source-changed",
+      "title": "New content detected: NMDC Limited — Investor news (Bailadila + Donimalai)",
+      "url": "https://www.nmdc.co.in/investors/investor-news",
+      "keyword_hits": [
+        "NMDC"
+      ],
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     },
     {
@@ -55,7 +113,7 @@
         "IBRAM",
         "Brazil"
       ],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     },
     {
@@ -68,7 +126,7 @@
         "iron ore stocks",
         "stockpile"
       ],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     },
     {
@@ -77,10 +135,9 @@
       "title": "New content detected: SteelOrbis — China iron ore imports",
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
       "keyword_hits": [
-        "China",
-        "iron ore imports"
+        "China"
       ],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     },
     {
@@ -89,10 +146,9 @@
       "title": "New content detected: SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
       "keyword_hits": [
-        "freight rate",
         "Capesize"
       ],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     },
     {
@@ -101,7 +157,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-10-19T13:19:35+00:00",
+      "retrieved_at": "2026-10-26T13:06:18+00:00",
       "reviewed": false
     }
   ],
@@ -110,6 +166,6 @@
     "source_tier": 3,
     "status": "error",
     "error": "HTTP Error 429: Too Many Requests",
-    "retrieved_at": "2026-10-19T13:19:35+00:00"
+    "retrieved_at": "2026-10-26T13:06:18+00:00"
   }
 }
