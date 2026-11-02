@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-26T13:06:18+00:00",
+  "generated_at": "2026-11-02T15:57:09+00:00",
   "checks": [
     {
       "id": "rio-tinto-sec-6k",
       "name": "Rio Tinto — SEC EDGAR 6-K filings index",
       "tier": 1,
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "11f7be714991fc0b65900a8f387d44024fca47864af7f3c702c38c2030b3ad97",
       "changed": false,
@@ -18,7 +18,7 @@
       "name": "BHP — Media centre releases (Operational Review index)",
       "tier": 1,
       "url": "https://www.bhp.com/news/media-centre",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "fingerprint": "",
@@ -30,10 +30,10 @@
       "name": "Fortescue — Results and operational performance index",
       "tier": 1,
       "url": "https://investors.fortescue.com/en/results-and-operational-performance",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "ad0355a6d17eae70988e451e30acb324f3d693bd2b32900b115b0cfb4d224623",
-      "changed": true,
+      "changed": false,
       "keyword_hits": [
         "quarterly production report"
       ],
@@ -44,25 +44,25 @@
       "name": "Vale — Production and sales report landing page",
       "tier": 1,
       "url": "https://vale.com/investors",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "8ebe628d425b54c6ed8ab3b8b5aa1c2bbf347a95635ecb80021ba791b8b41e59",
+      "fingerprint": "6e2a45887538360bb467339824a446cd428bd70933410fb4c5c86cc7211cd23a",
       "changed": true,
       "keyword_hits": [
         "production and sales",
         "Carajás"
       ],
-      "content_sample": "Institutional Presentation Click to acess Investor Toolkit Click to acess News Q3 2026 Performance Release Dates Emergency Level of Forquilha I Dam Lowered from Level 2 to Level 1 Vale's Production and Sales report for 2Q26 is now available Vale announces dates for 2Q26 performance report Vale Reinforces Pioneering Approach in New ISSB-Standard Report, Highlighting Circular Economy as a Business Opportunity Scroll to see more Quarterly Reports Ou"
+      "content_sample": "Institutional Presentation Click to acess Investor Toolkit Click to acess News 3Q26 Quarterly Results Check out our Q3 2026 financial results Q3 2026 Performance Release Dates Emergency Level of Forquilha I Dam Lowered from Level 2 to Level 1 Vale's Production and Sales report for 2Q26 is now available Scroll to see more Quarterly Reports Our latest financial and operating results are just a click away, as are our historical annual balance sheets"
     },
     {
       "id": "anglo-american-production-report",
       "name": "Anglo American — Press releases index (quarterly production reports)",
       "tier": 1,
       "url": "https://www.angloamerican.com/media/press-releases",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "3b5eff232730aee09176ad3fdb276e063b4de5159bca062bbdcbebf17d1c19da",
-      "changed": true,
+      "changed": false,
       "keyword_hits": [
         "premium iron ore",
         "production report"
@@ -74,21 +74,21 @@
       "name": "Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
       "tier": 1,
       "url": "https://www.asx.com.au/markets/company/CIA",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "8ce94949a33812447884bb6448abf8a65fa2622605c65a71841645ad1e542e39",
+      "fingerprint": "002d97e3209fdb61bc4157a118d13a457e9d9c00d474d4a18591aa3723c73af5",
       "changed": true,
       "keyword_hits": [],
-      "content_sample": "CIA share price and company information for ASX:CIA --> --> --> --> --> --> ASX --> --> Login {{numOfNotifications}} account_circle {{ displayName }} account_circle ASX Sharemarket Game Frequently asked questions (FAQs) --> ASX Schools Sharemarket Game Frequently Asked Questions (FAQs) My dashboard My profile Download Legacy Watchlist --> Logout {{ item.name }} {{item.marketNotificationCount}} {{item.marketNotificationCount}} No watchlists {{numO"
+      "content_sample": "CIA share price and company information for ASX:CIA --> --> --> --> --> --> ASX --> --> Login {{numOfNotifications}} account_circle {{ displayName }} account_circle ASX Sharemarket Game Frequently asked questions (FAQs) --> Frequently Asked Questions (FAQs) My dashboard My profile Download Legacy Watchlist --> Logout {{ item.name }} {{item.marketNotificationCount}} {{item.marketNotificationCount}} No watchlists {{numOfNotifications}} account_circ"
     },
     {
       "id": "arcelormittal-liberia-sec-6k",
       "name": "ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
       "tier": 1,
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "268e71b8349eea717d7bcea357d0ce131f112c804239f3fdfa579c356834a0cc",
+      "fingerprint": "684e48609d148728f95e4132d6298162b9d34fb3ca5d01592e8c5c68588c1965",
       "changed": true,
       "keyword_hits": [],
       "content_sample": "EDGAR Search Results SEC.gov EDGAR Latest Filings Filings search tools EDGAR Company Search Results SEC Home » Company Search » Current Page Mailing Address 24-26, BOULEVARD D?AVRANCHES L-1160 LUXEMBOURG GRAND DUCHY OF LUXEMBOURG N4 00000 Business Address 24-26, BOULEVARD D?AVRANCHES L-1160 LUXEMBOURG GRAND DUCHY OF LUXEMBOURG N4 00000 35247922151 ArcelorMittal CIK #: 0001243429 (see all company filings) SIC : 3312 - STEEL WORKS, BLAST FURNACES R"
@@ -98,10 +98,10 @@
       "name": "Anglo American Kumba Iron Ore — Press releases index (Sishen + Kolomela)",
       "tier": 1,
       "url": "https://www.angloamericankumba.com/media/press-releases",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "af99d709df088b316867385fc324cac7240f404b3b43245fbeda50ceeaf8a672",
-      "changed": true,
+      "changed": false,
       "keyword_hits": [
         "Kumba",
         "Sishen",
@@ -114,23 +114,24 @@
       "name": "LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
       "tier": 1,
       "url": "https://lkab.com/en/press/",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "9877d12e4f96d3a30276c53f26218a82120107ed7f06d9c10632d5c981165164",
+      "fingerprint": "5ad3246f59735310532030fff2d4f92edb345a673d36150b90a8bee66b8749c3",
       "changed": true,
       "keyword_hits": [
         "LKAB",
         "Kiirunavaara",
-        "Malmberget"
+        "Malmberget",
+        "delivery volumes"
       ],
-      "content_sample": "Press Archive - Luossavaara-Kiirunavaara AB Search Menu Close Who we are What we do Work with us Community development Svenska News Financial information Contact us Sales and support Suppliers Privacy and law From A to Z © Luossavaara-Kiirunavaara AB 0771-760 000 info@lkab.com Dark mode Light mode Press Press release October 26, 2026 LKAB interim report for third quarter 2026 to be published on 28 October LKAB’s interim report for the third quart"
+      "content_sample": "Press Archive - Luossavaara-Kiirunavaara AB Search Menu Close Who we are What we do Work with us Community development Svenska News Financial information Contact us Sales and support Suppliers Privacy and law From A to Z © Luossavaara-Kiirunavaara AB 0771-760 000 info@lkab.com Dark mode Light mode Press Press release October 28, 2026 Interim Report July–September 2026: Increased delivery volume and improved earnings LKAB reports improved earnings"
     },
     {
       "id": "labrador-iron-ore-royalty-corp",
       "name": "Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
       "tier": 1,
       "url": "https://labradorironore.com/news/",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "5934eb0645ac8e575afeeb63cfd9d9f6ecc998f4fb637cf447904647fff7a4fd",
       "changed": false,
@@ -145,13 +146,12 @@
       "name": "Samarco — Company site (Germano Complex, Vale/BHP JV)",
       "tier": 1,
       "url": "https://www.samarco.com/",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "219da23328e09cabf2248d6bcaf5d1c2f5e16ffceaedd30617d49f703515ad7a",
+      "fingerprint": "cbf4c7baa1ecc3d387e3a5c0d5f561b6bb5217c72f3533255b43f6110ac31adc",
       "changed": true,
       "keyword_hits": [
-        "Samarco",
-        "Germano"
+        "Samarco"
       ],
       "content_sample": "Home - Samarco Mineração A- A+ Contraste Acessibilidades 1 Conteúdo 2 Menu 3 Rodapé PT EN Sobre Sustentabilidade Reparação Estruturas geotécnicas Fornecedores Relações com Investidores Imprensa Contato Sobre Quem somos Pessoas Governança corporativa Processo produtivo Porto Samarco Comunica Retomada Recuperação judicial O que é Situação Financeira Dívidas Fatos Documentos Formulário Digital para Credores Sustentabilidade Estratégia de Sustentabil"
     },
@@ -160,10 +160,10 @@
       "name": "NMDC Limited — Investor news (Bailadila + Donimalai)",
       "tier": 1,
       "url": "https://www.nmdc.co.in/investors/investor-news",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "29c490e7bc9c0b3bd53daefee1948f6acf44c2116acd0e92dba8eb0903130d2c",
-      "changed": true,
+      "changed": false,
       "keyword_hits": [
         "NMDC"
       ],
@@ -174,9 +174,9 @@
       "name": "USGS — Mineral Commodity Summaries (iron ore)",
       "tier": 2,
       "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "error",
-      "error": "The read operation timed out",
+      "error": "HTTP Error 504: Gateway Time-out",
       "fingerprint": "9a1f9971f444317a31a20e6a2dc22eac29806c0522cc5cc4827a14c70a65cb02",
       "changed": false,
       "keyword_hits": []
@@ -186,7 +186,7 @@
       "name": "World Steel Association — Steel statistics",
       "tier": 2,
       "url": "https://worldsteel.org/data/",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "893afbba8e3743af2adf7552e60b3d13037328c79adbf68cdcc900a9d46c3c2b",
       "changed": false,
@@ -202,7 +202,7 @@
       "name": "SGX iron ore 62% Fe futures — price reference (via Investing.com, free aggregator quote)",
       "tier": 2,
       "url": "https://www.investing.com/commodities/iron-ore-62-cfr-futures",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "error",
       "error": "HTTP Error 403: Forbidden",
       "fingerprint": "f618084a8fc89069c160ee321b53959a529d81c1a23105a46b973a8096dc4b7c",
@@ -214,7 +214,7 @@
       "name": "Australian Office of the Chief Economist — Resources and Energy Quarterly (iron ore outlook)",
       "tier": 2,
       "url": "https://www.industry.gov.au/publications/resources-and-energy-quarterly-all",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "error",
       "error": "The read operation timed out",
       "fingerprint": "",
@@ -226,9 +226,9 @@
       "name": "IBRAM (Instituto Brasileiro de Mineração) — sector investment and production forecasts",
       "tier": 2,
       "url": "https://ibram.org.br/en/",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "f7950439bd94221ee16a850b567753a93cdcbdd08a70768637d8243bb1f1e82e",
+      "fingerprint": "44d25dfa5ce587d2a4c87ea8dc2f0ebd8c38a930dfde8cbca071878bd8de38fc",
       "changed": true,
       "keyword_hits": [
         "IBRAM",
@@ -241,7 +241,7 @@
       "name": "Natural Resources Canada — Iron ore facts / Annual Statistics of Mineral Production",
       "tier": 2,
       "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "c6c8c5ae1a46a17817087c192b80a3de4f1b43ab1cc5e72bf9911fa46a449a0c",
       "changed": false,
@@ -259,25 +259,23 @@
       "name": "Mysteel — China iron ore port inventory (weekly)",
       "tier": 2,
       "url": "https://www.mysteel.net/h/iron-ore/",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "7df04e531d600d010cdcf25098fc6ff4f37ff720f86ec168771ed9ce1b29b403",
+      "fingerprint": "11b2301502e8fdbd88f1deb10ff6f7eaa86bd7a63746efbe58b5198bef159243",
       "changed": true,
       "keyword_hits": [
-        "China",
-        "iron ore stocks",
-        "stockpile"
+        "China"
       ],
-      "content_sample": "Prices, Data & News from the China Iron Ore Market | Mysteel Terms & Conditions | Privacy Policy | Mysteel.com FREE TRIAL LOGIN Commodities Ferrous Non-Ferrous Energy Chemicals Agriculture New Energy Market Insights News Analysis Mysteel Surveys Prices & Indices Price Curve Mysteel Indices Daily Prices International Prices Import/Export Price My Favorites MyData Commodity DataBuffet Events Products & Services Online Subscriptions Report & Analysi"
+      "content_sample": "Prices, Data & News from the China Iron Ore Market | Mysteel Terms & Conditions | Privacy Policy | Mysteel.com FREE TRIAL LOGIN Commodities Ferrous Non-Ferrous Energy Chemicals Agriculture New Energy Market Insights News Analysis Mysteel Surveys Podcast Prices & Indices Price Curve Mysteel Indices Daily Prices International Prices Import/Export Price My Favorites MyData Commodity DataBuffet Events Products & Services Online Subscriptions Report &"
     },
     {
       "id": "steelorbis-china-iron-ore-imports",
       "name": "SteelOrbis — China iron ore imports",
       "tier": 2,
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "acc4c675feadc8acba6a84d4a54c69e982787f3bc7b72e5e90f7a18efc5d2c95",
+      "fingerprint": "1579b08a37e0a6083242e20188e3386908e33fc7a996c599e1b89294b44a554b",
       "changed": true,
       "keyword_hits": [
         "China"
@@ -289,10 +287,10 @@
       "name": "SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
       "tier": 2,
       "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
       "fingerprint": "aa8c6403d42e736c7afcc6c9eeddec51cd6546fdd96935dea013fbbf1c9f797f",
-      "changed": true,
+      "changed": false,
       "keyword_hits": [
         "Capesize"
       ],
@@ -303,9 +301,9 @@
       "name": "IndexBox/Kallanish — Iron ore freight rates roundups",
       "tier": 2,
       "url": "https://www.indexbox.io/blog/",
-      "checked_at": "2026-10-26T13:06:18+00:00",
+      "checked_at": "2026-11-02T15:57:09+00:00",
       "status": "ok:200",
-      "fingerprint": "bd3cbc0d91068901bc6a2f4e4812ae3794eb0c000482b4c093f59960bb8d5229",
+      "fingerprint": "5d9f9bf3c02f38bd4f18ee5e7e90cae3f0634119f8643ffaa12746a73f340da6",
       "changed": true,
       "keyword_hits": [],
       "content_sample": "Blog – IndexBox – Get the Latest Insights and Statistics We use cookies to improve your experience and for marketing. Read our cookie policy Manage cookies Accept essential cookies Accept all cookies Index BOX Pricing Blog Reports About us Support Search Go to the Platform Sign up English English Deutsch Français Español 简体中文 Русский العربية 日本語 繁體中文 한국어 Italiano Português (Brasil) Index BOX Sign up Pricing Blog Reports About us Support English E"

@@ -1,18 +1,7 @@
 {
-  "generated_at": "2026-10-26T13:06:18+00:00",
+  "generated_at": "2026-11-02T15:57:09+00:00",
   "review_required": true,
   "curated_candidates": [
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Fortescue — Results and operational performance index",
-      "url": "https://investors.fortescue.com/en/results-and-operational-performance",
-      "keyword_hits": [
-        "quarterly production report"
-      ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
-      "reviewed": false
-    },
     {
       "source_tier": 1,
       "status": "source-changed",
@@ -22,19 +11,7 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Anglo American — Press releases index (quarterly production reports)",
-      "url": "https://www.angloamerican.com/media/press-releases",
-      "keyword_hits": [
-        "premium iron ore",
-        "production report"
-      ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -43,7 +20,7 @@
       "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
       "url": "https://www.asx.com.au/markets/company/CIA",
       "keyword_hits": [],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -52,20 +29,7 @@
       "title": "New content detected: ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
       "keyword_hits": [],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Anglo American Kumba Iron Ore — Press releases index (Sishen + Kolomela)",
-      "url": "https://www.angloamericankumba.com/media/press-releases",
-      "keyword_hits": [
-        "Kumba",
-        "Sishen",
-        "production and sales report"
-      ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -76,9 +40,10 @@
       "keyword_hits": [
         "LKAB",
         "Kiirunavaara",
-        "Malmberget"
+        "Malmberget",
+        "delivery volumes"
       ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -87,21 +52,9 @@
       "title": "New content detected: Samarco — Company site (Germano Complex, Vale/BHP JV)",
       "url": "https://www.samarco.com/",
       "keyword_hits": [
-        "Samarco",
-        "Germano"
+        "Samarco"
       ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: NMDC Limited — Investor news (Bailadila + Donimalai)",
-      "url": "https://www.nmdc.co.in/investors/investor-news",
-      "keyword_hits": [
-        "NMDC"
-      ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -113,7 +66,7 @@
         "IBRAM",
         "Brazil"
       ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -122,11 +75,9 @@
       "title": "New content detected: Mysteel — China iron ore port inventory (weekly)",
       "url": "https://www.mysteel.net/h/iron-ore/",
       "keyword_hits": [
-        "China",
-        "iron ore stocks",
-        "stockpile"
+        "China"
       ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -137,18 +88,7 @@
       "keyword_hits": [
         "China"
       ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 2,
-      "status": "source-changed",
-      "title": "New content detected: SteelOrbis — Iron ore Capesize freight rates (Brazil-China and Australia-China)",
-      "url": "https://www.steelorbis.com/steel-market/iron-ore.htm",
-      "keyword_hits": [
-        "Capesize"
-      ],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     },
     {
@@ -157,7 +97,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-10-26T13:06:18+00:00",
+      "retrieved_at": "2026-11-02T15:57:09+00:00",
       "reviewed": false
     }
   ],
@@ -165,7 +105,7 @@
   "wide_web_status": {
     "source_tier": 3,
     "status": "error",
-    "error": "HTTP Error 429: Too Many Requests",
-    "retrieved_at": "2026-10-26T13:06:18+00:00"
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "retrieved_at": "2026-11-02T15:57:09+00:00"
   }
 }
