@@ -1,16 +1,7 @@
 {
-  "generated_at": "2026-11-09T16:23:10+00:00",
+  "generated_at": "2026-11-16T15:50:02+00:00",
   "review_required": true,
   "curated_candidates": [
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Rio Tinto — SEC EDGAR 6-K filings index",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000863064&type=6-K&dateb=&owner=include&count=40",
-      "keyword_hits": [],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
-      "reviewed": false
-    },
     {
       "source_tier": 1,
       "status": "source-changed",
@@ -20,51 +11,20 @@
         "production and sales",
         "Carajás"
       ],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
       "reviewed": false
     },
     {
       "source_tier": 1,
       "status": "source-changed",
-      "title": "New content detected: Champion Iron — ASX announcements (Bloom Lake quarterly activities report)",
-      "url": "https://www.asx.com.au/markets/company/CIA",
-      "keyword_hits": [],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: ArcelorMittal — SEC EDGAR 6-K filings index (Liberia mining segment)",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001243429&type=6-K&dateb=&owner=include&count=40",
-      "keyword_hits": [],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: LKAB — Press index (Kiruna, Malmberget, Svappavaara)",
-      "url": "https://lkab.com/en/press/",
+      "title": "New content detected: Anglo American Kumba Iron Ore — Press releases index (Sishen + Kolomela)",
+      "url": "https://www.angloamericankumba.com/media/press-releases",
       "keyword_hits": [
-        "LKAB",
-        "Kiirunavaara",
-        "Malmberget",
-        "delivery volumes"
+        "Kumba",
+        "Sishen",
+        "production and sales report"
       ],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
-      "reviewed": false
-    },
-    {
-      "source_tier": 1,
-      "status": "source-changed",
-      "title": "New content detected: Labrador Iron Ore Royalty Corporation — News releases (IOC production)",
-      "url": "https://labradorironore.com/news/",
-      "keyword_hits": [
-        "Iron Ore Company of Canada",
-        "IOC"
-      ],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
       "reviewed": false
     },
     {
@@ -75,7 +35,7 @@
       "keyword_hits": [
         "Samarco"
       ],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
       "reviewed": false
     },
     {
@@ -87,7 +47,22 @@
         "IBRAM",
         "Brazil"
       ],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
+      "reviewed": false
+    },
+    {
+      "source_tier": 2,
+      "status": "source-changed",
+      "title": "New content detected: Natural Resources Canada — Iron ore facts / Annual Statistics of Mineral Production",
+      "url": "https://natural-resources.canada.ca/minerals-mining/mining-data-statistics-analysis/minerals-metals-facts/iron-ore-facts",
+      "keyword_hits": [
+        "iron ore",
+        "Canada",
+        "production",
+        "exports",
+        "Natural Resources Canada"
+      ],
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
       "reviewed": false
     },
     {
@@ -100,7 +75,7 @@
         "iron ore stocks",
         "stockpile"
       ],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
       "reviewed": false
     },
     {
@@ -111,7 +86,7 @@
       "keyword_hits": [
         "China"
       ],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
       "reviewed": false
     },
     {
@@ -120,7 +95,7 @@
       "title": "New content detected: IndexBox/Kallanish — Iron ore freight rates roundups",
       "url": "https://www.indexbox.io/blog/",
       "keyword_hits": [],
-      "retrieved_at": "2026-11-09T16:23:10+00:00",
+      "retrieved_at": "2026-11-16T15:50:02+00:00",
       "reviewed": false
     }
   ],
@@ -129,6 +104,6 @@
     "source_tier": 3,
     "status": "error",
     "error": "HTTP Error 429: Too Many Requests",
-    "retrieved_at": "2026-11-09T16:23:10+00:00"
+    "retrieved_at": "2026-11-16T15:50:02+00:00"
   }
 }
